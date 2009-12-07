@@ -1,0 +1,65 @@
+# -*- coding: utf-8; mode: org; -*-
+* Структура src директории
+** TODO com/vk/apivk/APIVK.as
+   public static function init(
+                               viewer_id: String,
+                               api_id: String,
+                               secret: String,
+                               isTestMode: Boolean = false
+                              )
+   public static var format: String = XML;
+   public static const XML: String = 'XML';
+   public static const JSON: String = 'JSON';
+   public static var httpMethod: String = POST;
+   public static const POST: String = 'POST';
+   public static const GET: String = 'GET';
+   public static function set method (value: String): void;
+   public static function addVar(name: String, value: String);
+   // для случаев, когда value может содержать "плохие" символы:
+   public static function addVarSafe(name: String, value: String);
+   // создать объект XMLRequest и удалить данные полученные
+   // через addVar, addVarSafe
+   public static function req(): XMLRequest;
+** com/vk/apivk/lib/*.as
+*** TODO [#A] Variables.as
+    public static var user_id: String;
+    public static var session: String;
+**** getVariable
+**** getVariables
+**** putVariable
+*** TODO [#A] HighScores.as
+**** getHighScores.as
+**** setUserScore.as
+*** TODO Geo.as
+**** getCities
+**** getCountries
+*** TODO Messages.as
+**** getMessages
+**** sendMessage
+*** TODO Misc.as
+**** getServerTime.as
+**** getAds.as
+*** TODO User.as
+**** isAppUser
+**** getProfiles
+**** getFriends
+**** getAppFriends
+**** getUserBalance
+**** getUserSettings
+**** getGroups
+**** getGroupsFull
+*** TODO [#C] Audio.as
+*** TODO [#C] Offers.as
+*** TODO [#C] Pages.as
+*** TODO [#C] Photos.as
+*** TODO [#C] Questions.as
+* Утилиты
+** TODO [#A] ant
+** TODO [#B] asdoc
+** TODO [#C] release-tool
+* Примеры
+** TODO static linking
+** TODO dynamic linking
+* Templates
+** TODO newClass.tmpl
+** TODO newFunction.tmpl 
