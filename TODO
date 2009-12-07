@@ -1,6 +1,6 @@
 # -*- coding: utf-8; mode: org; -*-
 * Структура src директории
-** TODO com/vk/apivk/APIVK.as
+** TODO com/vk/api/APIVK.as
    public static function init(
                                viewer_id: String,
                                api_id: String,
@@ -20,7 +20,7 @@
    // создать объект XMLRequest и удалить данные полученные
    // через addVar, addVarSafe
    public static function req(): XMLRequest;
-** com/vk/apivk/lib/*.as
+** com/vk/api/lib/*.as
 *** TODO [#A] Variables.as
     public static var user_id: String;
     public static var session: String;
