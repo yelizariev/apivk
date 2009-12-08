@@ -18,6 +18,7 @@ package com.vk.api
 	 * создания объектов <code>URLRequest</code>.</p>
 	 *
 	 * @see http://apivk.googlecode.com
+	 * @see http://vkontakte.ru/pages.php?id=2369282
 	 * @see http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html
 	 */
 	public class APIVK
@@ -126,8 +127,12 @@ package com.vk.api
 		 */
 		public static function req(): URLRequest{
 			_params.push(new Parameter('api_id', _apiID          ));
-			_params.push(new Parameter('v'     , API_ID          ));
+			_params.push(new Parameter('v'     , API_VERSION     ));
 			_params.push(new Parameter('sig'   , getSig(_params) ));
+			if (format == JSON)
+				_params.push(new Parameter('format', JSON));
+			if (_isTestMode)
+				_params.push(new Parameter('test_mode', '1'));
 
 			var req: URLRequest = new URLRequest();
 			req.method = httpMethod;
