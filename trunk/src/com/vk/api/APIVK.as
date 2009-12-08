@@ -11,6 +11,12 @@
 
 package com.vk.api
 {
+	import flash.net.URLRequest;
+	import flash.net.URLVariables;
+	import flash.utils.ByteArray;
+	import com.hurlant.crypto.hash.MD5;
+	import com.hurlant.crypto.util.Hex;
+
 	/**
 	 * Главный класс библиотеки apivk.
 	 * <p>Единственный обязательный класс в библиотеке.</p>
@@ -148,7 +154,11 @@ p			req.data = vars;
 		private function getSig(parameters: Array): String
 		{
 			_params.sortOn('name');
-			return MD5.encrypt(_viewerID + _params.join('') + _secret);
+			var str: String = _viewerID + _params.join('') + _secret;
+			var bytes:ByteArray = new ByteArray();
+			bytes.writeUTFBytes(str);
+			bytes = new MD5().hash(bytes);
+			return Hex.fromArray(bytes);
 		}
 	}
 }

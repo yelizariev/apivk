@@ -1,5 +1,7 @@
 2009-12-08  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* Добавлена библиотека as3crypto.googlecode.com
+
 	* Добавлен класс APIVK
 
      Copyright (c) 2009 The apivk.googlecode.com project Authors.
