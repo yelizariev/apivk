@@ -1,6 +1,6 @@
 # -*- coding: utf-8; mode: org; -*-
 * Структура src директории
-** TODO com/vk/api/APIVK.as
+** DONE com/vk/api/APIVK.as
    public static function init(
                                viewer_id: String,
                                api_id: String,
