@@ -147,7 +147,7 @@ package com.vk.api
 			for each (var p: Parameter in _params){
 				vars[p.name] = p.value;
 			}
-p			req.data = vars;
+			req.data = vars;
 			_params.slice(0);// clear array;
 			return req;
 		}
