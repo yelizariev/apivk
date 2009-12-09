@@ -61,8 +61,8 @@
 ** TODO static linking
 ** TODO dynamic linking
 * Templates
-** TODO newClass.tmpl
-** TODO newFunction.tmpl 
+** DONE newClass.tmpl
+** DONE newFunction.tmpl 
 * test-app
 ** TODO Блэкджек
 ** TODO Шлюхи
