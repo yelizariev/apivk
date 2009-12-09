@@ -58,7 +58,7 @@
 ** TODO [#B] asdoc
 ** TODO [#C] release-tool
 * Примеры
-** TODO static linking
+** DONE static linking
 ** TODO dynamic linking
 * Templates
 ** DONE newClass.tmpl
