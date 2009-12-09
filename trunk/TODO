@@ -1,25 +1,7 @@
 # -*- coding: utf-8; mode: org; -*-
 * Структура src директории
-** DONE com/vk/api/APIVK.as
-   public static function init(
-                               viewer_id: String,
-                               api_id: String,
-                               secret: String,
-                               isTestMode: Boolean = false
-                              )
-   public static var format: String = XML;
-   public static const XML: String = 'XML';
-   public static const JSON: String = 'JSON';
-   public static var httpMethod: String = POST;
-   public static const POST: String = 'POST';
-   public static const GET: String = 'GET';
-   public static function set method (value: String): void;
-   public static function addVar(name: String, value: String);
-   // для случаев, когда value может содержать "плохие" символы:
-   public static function addVarSafe(name: String, value: String);
-   // создать объект XMLRequest и удалить данные полученные
-   // через addVar, addVarSafe
-   public static function req(): XMLRequest;
+** com/vk/api/APIVK.as
+*** TODO AddVarSafe
 ** com/vk/api/lib/*.as
 *** TODO [#A] Variables.as
     public static var user_id: String;
@@ -54,15 +36,15 @@
 *** TODO [#C] Photos.as
 *** TODO [#C] Questions.as
 * Утилиты
-** TODO [#A] ant
+** [#A] ant
+*** TODO ExampleStatic
 ** TODO [#B] asdoc
 ** TODO [#C] release-tool
 * Примеры
-** DONE static linking
+** static linking
+*** TODO добавить комментарий как скомпилировать, какие зависимости есть
+*** TODO изменить метод АПИ с setUserScore на getServerTime
 ** TODO dynamic linking
-* Templates
-** DONE newClass.tmpl
-** DONE newFunction.tmpl 
 * test-app
 ** TODO Блэкджек
 ** TODO Шлюхи
