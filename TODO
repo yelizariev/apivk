@@ -27,7 +27,7 @@
 **** getVariable
 **** getVariables
 **** putVariable
-*** TODO [#A] HighScores.as
+*** DONE [#A] HighScores.as
 **** getHighScores.as
 **** setUserScore.as
 *** TODO Geo.as
