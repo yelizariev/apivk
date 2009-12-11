@@ -37,8 +37,8 @@
 *** TODO [#C] Questions.as
 * Утилиты
 ** [#A] ant
-*** TODO ExampleStatic
-** TODO [#B] asdoc
+*** DONE ExampleStatic
+** DONE [#B] asdoc
 ** TODO [#C] release-tool
 * Примеры
 ** static linking
