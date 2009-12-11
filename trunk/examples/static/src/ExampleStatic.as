@@ -13,6 +13,7 @@ package
 		public function ExampleStatic()
 		{
 			APIVK.init(
+			           'http://api.vkontakte.ru/api.php', //api_url
 			           '1857932', //viewer_id
 			           '1735731', //api_id
 			           'secret', //secret
@@ -25,7 +26,7 @@ package
 		}
 		private function onComplete(e: Event): void
 		{
-			trace('response: ' + e.data);
+			trace('response: ' + e.target.data);
 		}
 	}
 }

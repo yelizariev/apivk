@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="example with static linking" basedir="." default="swf">
+	<property file="../../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+	<target name="swf">
+		<mxmlc
+			 file="${basedir}/src/ExampleStatic.as"
+			 output="${basedir}/bin/ExampleStatic.swf"
+			 >
+			<load-config filename="${flex.config}" />
+			<source-path path-element="../../src" />
+			<source-path path-element="../../deps" />
+		</mxmlc>
+	</target>
+</project>

@@ -40,7 +40,7 @@ package com.vk.api.lib
 		 * @see http://vkontakte.ru/pages.php?o=-1&p=setUserScore
 		 */
 		public static function setUserScore(
-		                                    score: String,
+		                                    score: String
 		                                    ): URLRequest
 		{
 			APIVK.method = 'setUserScore';

@@ -49,3 +49,11 @@
 ** TODO Блэкджек
 ** TODO Шлюхи
 ** TODO Можно грабить корованы
+* README
+** TODO Пояснение про sandbox при локальном запуске
+   * Error #2044: Unhandled securityError:. text=Error #2048: Security
+     sandbox violation:
+     file:///home/ivann/svn/apivk/trunk/examples/static/bin/ExampleStatic.swf
+     cannot load data from http://api.vkontakte.ru/api.php.
+   * http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04a.html#119065
+** TODO build.properties.copy_and_edit

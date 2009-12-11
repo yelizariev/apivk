@@ -1,3 +1,8 @@
+2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* ExampleStatic.as: добавлен api_url в APIVK.init(...).
+	FIX: trace data
+
 2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* ExampleStatic.as: init version
