@@ -1,5 +1,7 @@
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* Variables.as: init version
+
 	* HighScores.as: Fix: syntax error
 
 2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
