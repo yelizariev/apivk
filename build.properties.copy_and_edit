@@ -5,7 +5,14 @@
 # -----------------------------------------------------------------
 
 # The location of the Flex SDK on your system
-FLEX_HOME = {your_system_path_to_flex_sdk}
+# FLEX_HOME = /opt/flex-sdk # unix
+# FLEX_HOME = C:\flex-sdk   # windows
+FLEX_HOME = 
+
+# References to the Flex SDK compilers
+# asdoc = asdoc     # unix
+# asdoc = asdoc.exe # windows
+asdoc = 
 
 # -----------------------------------------------------------------
 # Flex Paths - SHOULD NOT NEED TO MODIFY
@@ -17,13 +24,8 @@ flex.config = ${FLEX_HOME}/frameworks/flex-config.xml
 # The location of the ant directory
 flex.ant.tasks = ${FLEX_HOME}/ant/lib/flexTasks.jar
 
+# The location of the asdoc compiler
+flex.bin.asdoc = ${FLEX_HOME}/bin/${asdoc}
+
 # The location of the asdoc templates
 flex.asdoc.templates = ${FLEX_HOME}/asdoc/templates
-
-
-# -----------------------------------------------------------------
-# Project Paths - DO NOT MODIFY
-# -----------------------------------------------------------------
-src.dir = ${basedir}/src
-bin.dir = ${basedir}/bin
-docs.dir = ${basedir}/docs
