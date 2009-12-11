@@ -38,7 +38,7 @@ package com.vk.api
 		 * @see #XML
 		 * @see #JSON
 		 */
-		public static var format: String = XML;
+		public static var format: String = APIVK.XML;
 		public static const XML : String = 'XML';
 		public static const JSON: String = 'JSON';
 
