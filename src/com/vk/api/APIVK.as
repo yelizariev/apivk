@@ -15,7 +15,7 @@ package com.vk.api
 	import flash.net.URLVariables;
 	import flash.utils.ByteArray;
 	import com.hurlant.crypto.hash.MD5;
-	import com.hurlant.crypto.util.Hex;
+	import com.hurlant.util.Hex;
 
 	/**
 	 * Главный класс библиотеки apivk.
@@ -53,6 +53,7 @@ package com.vk.api
 		public static const POST: String = 'POST';
 		public static const GET : String = 'GET';
 
+		private static var _apiURL   : String;
 		private static var _viewerID  : String;
 		private static var _apiID     : String;
 		private static var _secret    : String;
@@ -69,6 +70,9 @@ package com.vk.api
 		 * то в качестве <code>viewer_id</code> нужно задавать id владельца
 		 * приложения <code>api_id</code>.</p>
 		 *
+		 * @param api_url адрес сервиса API, по которому необходимо
+		 * осуществлять запросы
+		 *
 		 * @param viewer_id id текущего пользователя, переданный SWF
 		 * посредством flashvars при инициализации.
 		 *
@@ -83,12 +87,14 @@ package com.vk.api
 		 * его на сайт. По умолчанию <code>false</code>.
 		 */
 		public static function init(
+		                            api_url   : String,
 		                            viewer_id : String,
 		                            api_id    : String,
 		                            secret    : String,
 		                            isTestMode: Boolean = false
 		                            ): void
 		{
+			_apiURL    = api_url;
 			_viewerID   = viewer_id;
 			_apiID      = api_id;
 			_secret     = secret;
@@ -114,7 +120,7 @@ package com.vk.api
 		 * <p>Используется для случаев, когда value может
 		 * содержать "плохие" символы.</p><p><code>TODO</code></p>
 		 */
-		public static function addVarSafe(name: String, value: String){
+		public static function addVarSafe(name: String, value: String): void{
 			//TODO
 			addVar(name, value);
 		}
@@ -132,15 +138,16 @@ package com.vk.api
 		 * @see #addVarSafe()
 		 */
 		public static function req(): URLRequest{
-			_params.push(new Parameter('api_id', _apiID          ));
-			_params.push(new Parameter('v'     , API_VERSION     ));
-			_params.push(new Parameter('sig'   , getSig(_params) ));
+			_params.push(new Parameter('api_id', _apiID     ));
+			_params.push(new Parameter('v'     , API_VERSION));
 			if (format == JSON)
 				_params.push(new Parameter('format', JSON));
 			if (_isTestMode)
 				_params.push(new Parameter('test_mode', '1'));
+			_params.push(new Parameter('sig'   , getSig(_params)));
 
 			var req: URLRequest = new URLRequest();
+			req.url    = _apiURL;
 			req.method = httpMethod;
 
 			var vars: URLVariables = new URLVariables();
@@ -151,7 +158,7 @@ package com.vk.api
 			_params.slice(0);// clear array;
 			return req;
 		}
-		private function getSig(parameters: Array): String
+		private static function getSig(parameters: Array): String
 		{
 			_params.sortOn('name');
 			var str: String = _viewerID + _params.join('') + _secret;
