@@ -106,13 +106,13 @@ package com.vk.api
 		 */
 		public static function set method (value: String): void
 		{
-			addVar('method', value);
+			addPar('method', value);
 		}
 
 		/**
 		 * Добавить параметр в список параметров запроса.
 		 */
-		public static function addVar(name: String, value: String): void{
+		public static function addPar(name: String, value: String): void{
 			_params.push(new Parameter(name, value));
 		}
 		/**
@@ -120,22 +120,22 @@ package com.vk.api
 		 * <p>Используется для случаев, когда value может
 		 * содержать "плохие" символы.</p><p><code>TODO</code></p>
 		 */
-		public static function addVarSafe(name: String, value: String): void{
+		public static function addParSafe(name: String, value: String): void{
 			//TODO
-			addVar(name, value);
+			addPar(name, value);
 		}
 
 		/**
 		 * Cоздать объект XMLRequest.
 		 * <p>Использует данные полученные через <code>APIVK.method</code>,
-		 * <code>addVar</code>, <code>addVarSafe</code>. После использования
+		 * <code>addPar</code>, <code>addParSafe</code>. После использования
 		 * эти данные удаляются.
 		 *
 		 * @return HTTP запрос, в соответствии с предыдущими обращениями к классу.
 		 *
 		 * @see #method
-		 * @see #addVar()
-		 * @see #addVarSafe()
+		 * @see #addPar()
+		 * @see #addParSafe()
 		 */
 		public static function req(): URLRequest{
 			_params.push(new Parameter('api_id', _apiID     ));

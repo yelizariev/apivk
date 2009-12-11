@@ -1,5 +1,9 @@
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* Variables.as: \<addVar->addPar
+
+	* HighScores.as: \<addVar->addPar
+
 	* Variables.as: init version
 
 	* HighScores.as: Fix: syntax error

@@ -206,7 +206,7 @@ package com.vk.api.lib
 		                        ): URLRequest
 		{
 			APIVK.method = 'getVariable';
-			APIVK.addVar('key', key.toString());
+			APIVK.addPar('key', key.toString());
 			checkUserIDGet(key);
 			checkSession(key);
 			return APIVK.req();
@@ -228,8 +228,8 @@ package com.vk.api.lib
 		                        ): URLRequest
 		{
 			APIVK.method = 'getVariables';
-			APIVK.addVar('key',   key.toString()   );
-			APIVK.addVar('count', count.toString() );
+			APIVK.addPar('key',   key.toString()   );
+			APIVK.addPar('count', count.toString() );
 			checkUserIDGet(key);
 			checkSession(key);
 			return APIVK.req();
@@ -250,8 +250,8 @@ package com.vk.api.lib
 		                        ): URLRequest
 		{
 			APIVK.method = 'putVariable';
-			APIVK.addVar('key',   key.toString() );
-			APIVK.addVar('value', value          );
+			APIVK.addPar('key',   key.toString() );
+			APIVK.addPar('value', value          );
 			checkUserIDPut(key);
 			checkSession(key);
 			return APIVK.req();
@@ -260,17 +260,17 @@ package com.vk.api.lib
 			if (user_id != "")
 				return;
 			if ((1280 <= key) && (key <= 1791))
-				APIVK.addVar('user_id', user_id);
+				APIVK.addPar('user_id', user_id);
 		}
 		private static function checkUserIDPut(key: uint): void{
 			if (user_id != "")
 				return;
 			if ((1504 <= key) && (key <= 1567))
-				APIVK.addVar('user_id', user_id);
+				APIVK.addPar('user_id', user_id);
 		}
 		private static function checkSession(key: uint): void{
 			if (2048 <= key)
-				APIVK.addVar('session', session);
+				APIVK.addPar('session', session);
 		}
 	}
 }
