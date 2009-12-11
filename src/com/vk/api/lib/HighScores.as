@@ -44,7 +44,7 @@ package com.vk.api.lib
 		                                    ): URLRequest
 		{
 			APIVK.method = 'setUserScore';
-			APIVK.addVar('score', score);
+			APIVK.addPar('score', score);
 			return APIVK.req();
 		}
 

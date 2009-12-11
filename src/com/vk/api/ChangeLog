@@ -6,6 +6,7 @@
 	Fix: расчёт сигнатуры был _до_ добавления параметров format и test_mode
 	Fix: static keyword for getSig(...)
 	Fix: XML->APIVK.XML
+        \<addVar->addPar
 
 2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
 
