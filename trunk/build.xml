@@ -3,7 +3,7 @@
 	<property file="build.properties" />
 	<property name="apivk.lib.desc" value="'Реализация конкретных методов АПИ'"/>
 	<property name="title.main" value="apivk.googlecode.com"/>
-	<property name="title.window" value="'Документация vkapi'"/>
+	<property name="title.window" value="'Документация apivk'"/>
 	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
 	<target name="doc">
 		<exec executable="${flex.bin.asdoc}" >
