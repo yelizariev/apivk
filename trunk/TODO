@@ -3,7 +3,7 @@
 ** com/vk/api/APIVK.as
 *** TODO AddVarSafe
 ** com/vk/api/lib/*.as
-*** TODO [#A] Variables.as
+*** DONE [#A] Variables.as
     public static var user_id: String;
     public static var session: String;
 **** getVariable
