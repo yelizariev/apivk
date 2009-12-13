@@ -1,3 +1,7 @@
+2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Misc.as: init version
+
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Variables.as: \<addVar->addPar

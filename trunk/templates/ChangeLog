@@ -1,3 +1,7 @@
+2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* newFunction.tmpl: addVar -> addPar
+
 2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* newChangeLog.as: init version

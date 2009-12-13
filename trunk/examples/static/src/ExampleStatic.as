@@ -6,7 +6,7 @@ package
 	import flash.events.Event;
 
 	import com.vk.api.APIVK;
-	import com.vk.api.lib.HighScores;
+	import com.vk.api.lib.Misc;
 
 	public class ExampleStatic extends Sprite
 	{
@@ -19,14 +19,14 @@ package
 			           'secret', //secret
 			           true //isTestMode
 			           );
-			var req: URLRequest = HighScores.setUserScore('9000');
+			var req: URLRequest = Misc.getServerTime();
 			var loader: URLLoader = new URLLoader();
 			loader.addEventListener(Event.COMPLETE, onComplete);
 			loader.load(req);
 		}
 		private function onComplete(e: Event): void
 		{
-			trace('response: ' + e.target.data);
+			trace('response:\n' + e.target.data);
 		}
 	}
 }
