@@ -4,7 +4,7 @@
  * An interface for each hash function to implement
  * Copyright (c) 2007 Henri Torgemane
  * 
- * See deps/com/hurlant/LICENSE.txt for full license information.
+ * See LICENSE_as3crypto.txt for full license information.
  */
 package com.hurlant.crypto.hash
 {
