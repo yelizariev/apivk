@@ -19,7 +19,7 @@
 *** TODO Messages.as
 **** getMessages
 **** sendMessage
-*** TODO Misc.as
+*** DONE Misc.as
 **** getServerTime.as
 **** getAds.as
 *** TODO User.as
