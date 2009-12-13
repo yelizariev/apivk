@@ -1,7 +1,8 @@
 # -*- coding: utf-8; mode: org; -*-
 * Структура src директории
 ** com/vk/api/APIVK.as
-*** TODO AddVarSafe
+*** TODO addParSafe
+*** TODO addParArray
 ** com/vk/api/lib/*.as
 *** DONE [#A] Variables.as
     public static var user_id: String;
