@@ -8,9 +8,9 @@ package
 	import com.vk.api.APIVK;
 	import com.vk.api.lib.Misc;
 
-	public class ExampleStatic extends Sprite
+	public class Unixtime extends Sprite
 	{
-		public function ExampleStatic()
+		public function Unixtime()
 		{
 			APIVK.init(
 			           'http://api.vkontakte.ru/api.php', //api_url

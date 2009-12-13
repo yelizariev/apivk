@@ -1,5 +1,7 @@
 2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* Unixtime.as: ExampleStatic.as переименован в Unixtime.as
+
 	* ExampleStatic.as: метод апи изменен: setUserScore -> getServerTime
 
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>

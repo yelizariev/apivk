@@ -42,10 +42,8 @@
 ** DONE [#B] asdoc
 ** TODO [#C] release-tool
 * Примеры
-** static linking
-*** TODO добавить комментарий как скомпилировать, какие зависимости есть
-*** TODO изменить метод АПИ с setUserScore на getServerTime
-** TODO dynamic linking
+** unixtime
+*** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
 * test-app
 ** TODO Блэкджек
 ** TODO Шлюхи
