@@ -4,7 +4,9 @@
 	<property name="apivk.lib.desc" value="'Реализация конкретных методов АПИ'"/>
 	<property name="title.main" value="apivk.googlecode.com"/>
 	<property name="title.window" value="'Документация apivk'"/>
+
 	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+
 	<target name="doc">
 		<exec executable="${flex.bin.asdoc}" >
 			<arg line="-source-path ${basedir}/src ${basedir}/deps"  />
@@ -18,5 +20,37 @@
 			<arg line="-main-title   ${title.main}"  />
 			<arg line="-window-title ${title.window}"/>
 		</exec>
+	</target>
+
+	<target name="swc">
+		<compc
+			 output="${basedir}/bin/apivk.swc"
+			 incremental="true"
+			 >
+			<source-path path-element="${basedir}/lib"/>
+			<include-sources
+				 dir="${basedir}/src"
+				 includes="**/*.as"
+				 />
+			<external-library-path
+				 dir="${basedir}/lib"
+				 includes="as3crypto.swc"
+				 append="true"
+				 />
+		</compc>
+	</target>
+
+	<target name="swc-deps">
+		<compc
+			 output="${basedir}/lib/apivk_deps_include.swc"
+			 incremental="true"
+			 >
+			<source-path path-element="${basedir}/src"/>
+			<source-path path-element="${basedir}/deps/src"/>
+			<include-sources
+				 dir="${basedir}/src"
+				 includes="**/*.as"
+				 />
+		</compc>
 	</target>
 </project>
