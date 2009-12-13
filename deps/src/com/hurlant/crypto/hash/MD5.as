@@ -14,7 +14,7 @@
  * This algorithm should not be your first choice for new developements, but is
  * included to allow interoperability with existing codes and protocols.
  * 
- * See deps/com/hurlant/LICENSE.txt for full license information.
+ * See LICENSE_as3crypto.txt for full license information.
  */
 package com.hurlant.crypto.hash
 {
