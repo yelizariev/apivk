@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="apivk.googlecode.com" basedir="." default="swc">
+	<property file="build.properties" />
+	<property name="apivk.lib.desc" value="'Реализация конкретных методов АПИ'"/>
+	<property name="doc.title.main"   value="apivk.googlecode.com"/>
+	<property name="doc.title.window" value="'Документация apivk'"/>
+	<property name="doc.version"      value="SVN"/>
+	<property name="doc.footer"       value="'v. ${doc.version}'"/>
+
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+
+	<target name="doc">
+		<exec executable="${flex.bin.asdoc}" >
+			<arg line="-source-path ${basedir}/src ${basedir}/deps/src"  />
+			<arg line="-doc-sources ${basedir}/src"  />
+			<arg line="-output      ${basedir}/docs" />
+			<arg line="-exclude-classes com.hurlant.util.Hex"/>
+			<arg line="-exclude-classes com.hurlant.crypto.hash.MD5"/>
+			<arg line="-exclude-classes com.hurlant.crypto.hash.IHash"/>
+			<arg line="-templates-path ${flex.asdoc.templates}" />
+			<arg line="-package com.vk.api.lib ${apivk.lib.desc}"/>
+			<arg line="-main-title   ${doc.title.main}"  />
+			<arg line="-window-title ${doc.title.window}"/>
+			<arg line="-footer       ${doc.footer}"      />
+		</exec>
+	</target>
+
+	<target name="swc">
+		<compc
+			 output="${basedir}/lib/apivk.swc"
+			 incremental="true"
+			 >
+			<source-path path-element="${basedir}/lib"/>
+			<include-sources
+				 dir="${basedir}/src"
+				 includes="**/*.as"
+				 />
+			<external-library-path
+				 dir="${basedir}/deps/lib"
+				 includes="as3crypto.swc"
+				 append="true"
+				 />
+		</compc>
+	</target>
+
+	<target name="swc-sa">
+		<compc
+			 output="${basedir}/lib/apivk_standalone.swc"
+			 incremental="true"
+			 >
+			<source-path path-element="${basedir}/src"/>
+			<source-path path-element="${basedir}/deps/src"/>
+			<include-sources
+				 dir="${basedir}/src"
+				 includes="**/*.as"
+				 />
+		</compc>
+	</target>
+
+	<target name="swf" depends="swc">
+		<unzip
+			 src="${basedir}/lib/apivk.swc"
+			 dest="${basedir}/lib"
+			 >
+			<patternset>
+				<include name="library.swf"/>
+			</patternset>
+			<mapper type="merge" to="apivk.swf"/>
+		</unzip>
+	</target>
+
+	<target name="swf-sa" depends="swc-sa">
+		<unzip
+			 src="${basedir}/lib/apivk_standalone.swc"
+			 dest="${basedir}/lib"
+			 >
+			<patternset>
+				<include name="library.swf"/>
+			</patternset>
+			<mapper type="merge" to="apivk_standalone.swf"/>
+		</unzip>
+	</target>
+
+</project>
