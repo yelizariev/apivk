@@ -1,0 +1,18 @@
+2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* APIVK.as: Fix: import
+	Fix: api_url
+	Fix: define void return value addVarSafe(...)
+	Fix: расчёт сигнатуры был _до_ добавления параметров format и test_mode
+	Fix: static keyword for getSig(...)
+	Fix: XML->APIVK.XML
+        \<addVar->addPar
+
+2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* lib: mkdir com/vk/api/lib
+
+
+ Copyright (c) 2009 The apivk.googlecode.com project Authors.
+ Copying and distribution of this file, with or without modification, are
+ permitted provided the copyright notice and this notice are preserved.

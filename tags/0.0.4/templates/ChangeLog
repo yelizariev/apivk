@@ -1,0 +1,15 @@
+2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* newFunction.tmpl: addVar -> addPar
+
+2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* newChangeLog.as: init version
+
+	* newClass.tmpl: init version
+
+	* newFunction.tmpl: init version
+
+ Copyright (c) 2009 The apivk.googlecode.com project Authors.
+ Copying and distribution of this file, with or without modification, are
+ permitted provided the copyright notice and this notice are preserved.
