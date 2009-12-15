@@ -1,17 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="example with static linking" basedir="." default="static">
 	<property file="../../build.properties" />
+	<property
+		 name="lib.dir"
+		 value="../../lib"
+		 />
+	<property
+		 name="apivk.standalone.swc"
+		 value="apivk_standalone.swc"
+		 />
+	<property
+		 name="apivk.rsl.url"
+		 value="http://api.vkontakte.ru/swf/apivk_standalone.swf"/>
 	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
 	<target name="static">
 		<mxmlc
-			 file="${basedir}/src/Unixtime.as"
-			 output="${basedir}/bin/Unixtime_static.swf"
+			 file="src/Unixtime.as"
+			 output="bin/Unixtime_static.swf"
 			 >
 			<load-config filename="${flex.config}" />
 			<library-path
-				 dir="${basedir}/../../lib"
-				 includes="apivk_deps_include.swc"
+				 dir="${lib.dir}"
+				 includes="${apivk.standalone.swc}"
 				 />
-	</mxmlc>
+		</mxmlc>
 	</target>
+	<target name="dynamic">
+		<mxmlc
+			 file="${basedir}/src/Unixtime.as"
+			 output="${basedir}/bin/Unixtime_dynamic.swf"
+			 >
+			<load-config filename="${flex.config}" />
+			<runtime-shared-library-path
+				 path-element="${lib.dir}/${apivk.standalone.swc}">
+				<url rsl-url="${apivk.rsl.url}"/>
+			</runtime-shared-library-path>
+		</mxmlc>
+	</target>
+
 </project>
