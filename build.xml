@@ -11,9 +11,9 @@
 
 	<target name="doc">
 		<exec executable="${flex.bin.asdoc}" >
-			<arg line="-source-path ${basedir}/src ${basedir}/deps/src"  />
-			<arg line="-doc-sources ${basedir}/src"  />
-			<arg line="-output      ${basedir}/docs" />
+			<arg line="-source-path src deps/src"  />
+			<arg line="-doc-sources src"  />
+			<arg line="-output      docs" />
 			<arg line="-exclude-classes com.hurlant.util.Hex"/>
 			<arg line="-exclude-classes com.hurlant.crypto.hash.MD5"/>
 			<arg line="-exclude-classes com.hurlant.crypto.hash.IHash"/>
@@ -27,16 +27,16 @@
 
 	<target name="swc">
 		<compc
-			 output="${basedir}/lib/apivk.swc"
+			 output="lib/apivk.swc"
 			 incremental="true"
 			 >
-			<source-path path-element="${basedir}/lib"/>
+			<source-path path-element="lib"/>
 			<include-sources
-				 dir="${basedir}/src"
+				 dir="src"
 				 includes="**/*.as"
 				 />
 			<external-library-path
-				 dir="${basedir}/deps/lib"
+				 dir="deps/lib"
 				 includes="as3crypto.swc"
 				 append="true"
 				 />
@@ -45,13 +45,16 @@
 
 	<target name="swc-sa">
 		<compc
-			 output="${basedir}/lib/apivk_standalone.swc"
+			 output="lib/apivk_standalone.swc"
 			 incremental="true"
 			 >
-			<source-path path-element="${basedir}/src"/>
-			<source-path path-element="${basedir}/deps/src"/>
+			<source-path path-element="src"/>
+			<library-path
+				 dir="deps/lib"
+				 includes="as3crypto.swc"
+				 />
 			<include-sources
-				 dir="${basedir}/src"
+				 dir="src"
 				 includes="**/*.as"
 				 />
 		</compc>
@@ -59,8 +62,8 @@
 
 	<target name="swf" depends="swc">
 		<unzip
-			 src="${basedir}/lib/apivk.swc"
-			 dest="${basedir}/lib"
+			 src="lib/apivk.swc"
+			 dest="lib"
 			 >
 			<patternset>
 				<include name="library.swf"/>
@@ -71,8 +74,8 @@
 
 	<target name="swf-sa" depends="swc-sa">
 		<unzip
-			 src="${basedir}/lib/apivk_standalone.swc"
-			 dest="${basedir}/lib"
+			 src="lib/apivk_standalone.swc"
+			 dest="lib"
 			 >
 			<patternset>
 				<include name="library.swf"/>
