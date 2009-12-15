@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project
 	 name="apivk.googlecode.com release version"
-	 basedir="../"
-	 default="version.current"
+	 basedir="."
+	 default="version.next"
 	 >
 	<property
 		 name="version.properties"
-		 value="${basedir}/release-tool/version.properties"
+		 value="version.properties"
 		 />
 	<property
 		 name="version.properties.comment"
@@ -77,4 +77,4 @@
 			<entry type="int" key="build" value="1" operation="+"/>
 		</propertyfile>
 	</target>
-</project
+</project>

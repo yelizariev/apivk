@@ -2,7 +2,7 @@
 <project
 	 name="apivk.googlecode.com release"
 	 basedir="../"
-	 default="version.current"
+	 default="release"
 	 >
 	<property
 		 name="svn.repo"
@@ -31,26 +31,30 @@
 		 classname="net.bluecow.googlecode.ant.GoogleCodeUploadTask"
 		 classpath="${gcupload.jar}"
 		 name="gcupload"/>
-
-	<!-- version targets: -->
+	<!-- main target: -->
 	<target
-		 name="version.read"
+		 name="release"
+		 depends="release.binary.build,
+		          version.next,
+		          release.binary.upload,
+		          release.trunk.upload,
+		          svn.tag.create"
 		 >
+	</target>
+	<!-- version targets: -->
+	<target name="version.read">
 		<property
 			 file="${version.properties}"
-			 prefix="version"
-			 />
+			 prefix="version" />
 		<property
 			 name="version.string"
-			 value="${version.major}.${version.minor}.${version.build}"
-			 />
+			 value="${version.major}.${version.minor}.${version.build}" />
 	</target>
 
 	<target
 		 name="version.current"
 		 depends="version.read"
-		 description="echo current version"
-		 >
+		 description="echo current version">
 		<echo>version=${version.string}</echo>
 	</target>
 
@@ -61,18 +65,14 @@
 		<ant
 			 antfile="release-tool/version.xml"
 			 target="version.next"
-			 inheritAll="false"
-			 />
+			 inheritAll="false" />
 	</target>
 
 	<!-- build binary: -->
-	<target
-		 name="release.binary.build"
-		 >
+	<target name="release.binary.build">
 		<ant
 			 antfile="trunk/build.xml"
-			 inheritAll="false"
-			 >
+			 inheritAll="false">
 			<target name="swf"/>
 			<target name="swf-sa"/>
 		</ant>
@@ -80,25 +80,20 @@
 
 	<!-- build docs -->
 	<target
-		 name="docs.build"
-		 depends="version.read"
-		 >
+		 name="release.docs.build"
+		 depends="version.read">
 		<ant
 			 antfile="trunk/build.xml"
 			 inheritAll="false"
-			 target="doc"
-			 >
+			 target="doc">
 			<property
 				 name="doc.version"
-				 value="${version.string}"
-				 />
+				 value="${version.string}" />
 		</ant>
 	</target>
 
 	<!-- release.binary. -->
-	<target
-		 name="release.binary.ask"
-		 >
+	<target name="release.binary.ask">
 		<input
 			 message="release binary?"
 			 validargs="y,n"
@@ -113,8 +108,7 @@
 	<!-- write version in RELEASE -->
 	<target
 		 name="release.notes.write"
-		 depends="version.read"
-		 >
+		 depends="version.read">
 		<tempfile property="temp.file" suffix=".tmp"/>
 		<echo
 			 file="${temp.file}"
@@ -133,33 +127,35 @@
 	<!-- svn tasks -->
 	<target
 		 name="svn.trunk.commit"
-		 depends="version.read"
-		 >
+		 depends="
+		          release.docs.build,
+		          release.binary.build,
+		          release.notes.write,
+		          version.read">
 		<svn
 			 username="${googlecode.username}"
-			 password="${svn.password}">
+			 password="${googlecode.password}">
 			<commit
-				 dir="trunk"
-				 message="release ${version.string}"
-				 />
+				 message="release ${version.string}">
+				<fileset dir="." includes="release-tool/version.properties trunk/"/>
+			</commit>
 		</svn>
 	</target>
 	<target
 		 name="svn.tag.create"
-		 depends="version.read"
-		 >
+		 depends="svn.trunk.commit, version.read">
 		<svn
 			 username="${googlecode.username}"
-			 password="${svn.password}">
+			 password="${googlecode.password}">
 			<copy
 				 srcUrl="${svn.repo}/trunk"
-				 destUrl="${svn.repo/tags/${version.string}"
-				 message="create tag for release ${version.string}"
-				 />
+				 destUrl="${svn.repo}/tags/${version.string}"
+				 message="create tag for release ${version.string}" />
 		</svn>
 	</target>
 	<target
 		 name="svn.trunk.export"
+		 depends="svn.trunk.commit"
 		 >
 		<tempfile property="temp.dir" suffix=".tmp-dir"/>
 		<svn
@@ -167,8 +163,7 @@
 			 password="${googlecode.password}">
 			<export
 				 srcUrl="${svn.repo}/trunk"
-				 destPath="${temp.dir}"
-				 />
+				 destPath="${temp.dir}" />
 		</svn>
 		<tar
 			 destfile="apivk.tar"
@@ -189,7 +184,7 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="trunk/lib/apivk.swc"
+			 filename="${basedir}/trunk/lib/apivk.swc"
 			 targetfilename="apivk-${version.string}.swc"
 			 summary="apivk only. Dependecies not include"
 			 labels="Featured" />
@@ -197,7 +192,7 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="trunk/lib/apivk.swf"
+			 filename="${basedir}/trunk/lib/apivk.swf"
 			 targetfilename="apivk-${version.string}.swf"
 			 summary="extracted apivk-${version.string}.swc"
 			 labels="Featured" />
@@ -205,7 +200,7 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="trunk/lib/apivk_standalone.swc"
+			 filename="${basedir}/trunk/lib/apivk_standalone.swc"
 			 targetfilename="apivk-${version.string}_standalone.swc"
 			 summary="apivk + part of as3crypto"
 			 labels="Featured" />
@@ -213,7 +208,7 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="trunk/lib/apivk_standalone.swf"
+			 filename="${basedir}/trunk/lib/apivk_standalone.swf"
 			 targetfilename="apivk-${version.string}_standalone.swf"
 			 summary="extracted apivk-${version.string}_standalone.swc"
 			 labels="Featured" />
@@ -226,9 +221,10 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="apivk.tar.gz"
+			 filename="${basedir}/apivk.tar.gz"
 			 targetfilename="apivk-${version.string}.tar.gz"
 			 summary="source"
 			 labels="Featured" />
+		<delete file="apivk.tar.gz"/>
 	</target>
 </project>
