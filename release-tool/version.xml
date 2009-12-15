@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project
+	 name="apivk.googlecode.com release version"
+	 basedir="../"
+	 default="version.current"
+	 >
+	<property
+		 name="version.properties"
+		 value="${basedir}/release-tool/version.properties"
+		 />
+	<property
+		 name="version.properties.comment"
+		 value="apivk-$${major}.$${minor}.$${build}"
+		 />
+
+
+	<target
+		 name="version.next"
+		 depends="version.next.major, version.next.minor, version.next.build"
+		 description="increase version"
+		 />
+
+	<target name="version.type">
+		<input
+			 message="specify type of version update: Major, minor, build?"
+			 validargs="M,m,b"
+			 defaultvalue="b"
+			 addproperty="version.type.input"
+			 />
+		<condition property="version.type.major">
+			<equals arg1="M" arg2="${version.type.input}"/>
+		</condition>
+		<condition property="version.type.minor">
+			<equals arg1="m" arg2="${version.type.input}"/>
+		</condition>
+		<condition property="version.type.build">
+			<equals arg1="b" arg2="${version.type.input}"/>
+		</condition>
+	</target>
+
+	<target
+		 name="version.next.major"
+		 depends="version.type"
+		 if="version.type.major"
+		 >
+		<propertyfile
+			 file="${version.properties}"
+			 comment="${version.properties.comment}"
+			 >
+			<entry type="int" key="major" value="1" operation="+"/>
+			<entry type="int" key="minor" value="0" operation="="/>
+			<entry type="int" key="build" value="0" operation="="/>
+		</propertyfile>
+	</target>
+	<target
+		 name="version.next.minor"
+		 depends="version.type"
+		 if="version.type.minor"
+		 >
+		<propertyfile
+			 file="${version.properties}"
+			 comment="${version.properties.comment}"
+			 >
+			<entry type="int" key="minor" value="1" operation="+"/>
+			<entry type="int" key="build" value="0" operation="="/>
+		</propertyfile>
+	</target>
+	<target
+		 name="version.next.build"
+		 depends="version.type"
+		 if="version.type.build"
+		 >
+		<propertyfile
+			 file="${version.properties}"
+			 comment="${version.properties.comment}"
+			 >
+			<entry type="int" key="build" value="1" operation="+"/>
+		</propertyfile>
+	</target>
+</project

@@ -1,0 +1,15 @@
+# location of the ant-googlecode (see http://code.google.com/p/ant-googlecode)
+gcupload.jar = path/to/ant-googlecode-0.0.2.jar
+
+# location of the svnant (see http://subclipse.tigris.org/svnant.html)
+svnant.lib.dir = path/to/svnant-x.x.x/lib
+
+# Google Code username. This is usually your gmail username.
+# Do not include the "@gmail.com" part.
+googlecode.username = 
+
+# Google Code generated password. This is not the same
+# as your gmail password: It's the same password you use
+# to check out your project's source using svn.
+# see https://code.google.com/hosting/settings
+googlecode.password = 

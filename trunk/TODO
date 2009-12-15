@@ -40,7 +40,7 @@
 ** [#A] ant
 *** DONE ExampleStatic
 ** DONE [#B] asdoc
-** TODO [#C] release-tool
+** DONE [#C] release-tool
 * Примеры
 ** unixtime
 *** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
