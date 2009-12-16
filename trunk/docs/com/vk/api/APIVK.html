@@ -4,7 +4,7 @@
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
 <link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
-<meta content="APIVK,com.vk.api.APIVK,GET,JSON,POST,XML,format,httpMethod,method,addPar,addParSafe,init,req" name="keywords">
+<meta content="APIVK,com.vk.api.APIVK,GET,JSON,POST,XML,format,httpMethod,method,addPar,addParArray,init,req" name="keywords">
 <title>com.vk.api.APIVK</title>
 </head>
 <body>
@@ -99,9 +99,10 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#addParSafe()">addParSafe</a>(name:String, value:String):void</div>
+<a class="signatureLink" href="#addParArray()">addParArray</a>(name:String, list:Array):void</div>
 <div class="summaryTableDescription">[static]
-   Добавить параметр в список параметров запроса.</div>
+   Добавить параметр, значение которого есть список значений
+      </div>
 </td><td class="summaryTableOwnerCol">APIVK</td>
 </tr>
 <tr class="">
@@ -217,40 +218,41 @@ showHideInherited();
 <div class="detailBody">
 <code>public static function addPar(name:String, value:String):void</code><p>
    Добавить параметр в список параметров запроса.
-   </p><span class="label">Parameters</span>
+      </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; имя параметра
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">value</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; значение параметра
+   </td>
 </tr>
 </table>
 </div>
-<a name="addParSafe()"></a>
+<a name="addParArray()"></a>
 <table cellspacing="0" cellpadding="0" class="detailHeader">
 <tr>
-<td class="detailHeaderName">addParSafe</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+<td class="detailHeaderName">addParArray</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function addParSafe(name:String, value:String):void</code><p>
-   Добавить параметр в список параметров запроса.
-   </p><p>Используется для случаев, когда value может
-   содержать "плохие" символы.</p><p><code>TODO</code></p>
-   <span class="label">Parameters</span>
+<code>public static function addParArray(name:String, list:Array):void</code><p>
+   Добавить параметр, значение которого есть список значений
+      </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> &mdash; список параметров.
+   </td>
 </tr>
 <tr>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">value</span>:String</code></td>
+<td width="20px"></td><td><code><span class="label">list</span>:Array</code></td>
 </tr>
 </table>
 </div>
@@ -384,8 +386,8 @@ showHideInherited();
 <hr>
 <br>
 <p></p>
-<center class="copyright">v. 0.0.1</center>
+<center class="copyright">v. SVN</center>
 </div>
 </body>
 </html>
-<!--v. 0.0.1-->
+<!--v. SVN-->
