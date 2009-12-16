@@ -1,0 +1,38 @@
+2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* User.as: init version
+
+	* UserSett.as: init version
+
+	* UserNameCase.as: init version
+
+	* UserField.as: init version
+
+	* Geo.as: init version
+
+	* Messages.as: init version
+
+	* Misc.as: добавлен метод setNameInMenu
+
+2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Misc.as: init version
+
+2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Variables.as: \<addVar->addPar
+
+	* HighScores.as: \<addVar->addPar
+
+	* Variables.as: init version
+
+	* HighScores.as: Fix: syntax error
+
+2009-12-09  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* HighScores.as: init version
+
+ Copyright (c) 2009 The apivk.googlecode.com project Authors.
+ Copying and distribution of this file, with or without modification, are
+ permitted provided the copyright notice and this notice are preserved.
+
