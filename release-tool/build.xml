@@ -223,7 +223,7 @@
 			 projectname="apivk"
 			 filename="${basedir}/apivk.tar.gz"
 			 targetfilename="apivk-${version.string}.tar.gz"
-			 summary="source"
+			 summary="source, binary, docs, examples, etc."
 			 labels="Featured" />
 		<delete file="apivk.tar.gz"/>
 	</target>
