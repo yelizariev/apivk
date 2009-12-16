@@ -2,6 +2,7 @@
 
 	* APIVK.as: удален метод addParSafe
 	добавлен метод addParArray
+        Fix: slice(0) -> splice(0)
 
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
 

@@ -94,7 +94,7 @@ package com.vk.api
 		                            isTestMode: Boolean = false
 		                            ): void
 		{
-			_apiURL    = api_url;
+			_apiURL     = api_url;
 			_viewerID   = viewer_id;
 			_apiID      = api_id;
 			_secret     = secret;
@@ -160,13 +160,14 @@ package com.vk.api
 				vars[p.name] = p.value;
 			}
 			req.data = vars;
-			_params.slice(0);// clear array;
+			_params.splice(0);// clear array;
 			return req;
 		}
 		private static function getSig(parameters: Array): String
 		{
 			_params.sortOn('name');
 			var str: String = _viewerID + _params.join('') + _secret;
+			//trace('str for sig: '+str);
 			var bytes:ByteArray = new ByteArray();
 			bytes.writeUTFBytes(str);
 			bytes = new MD5().hash(bytes);
