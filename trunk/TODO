@@ -1,9 +1,8 @@
 # -*- coding: utf-8; mode: org; -*-
 * Структура src директории
 ** com/vk/api/APIVK.as
-*** TODO addParSafe
-*** TODO addParArray
-** com/vk/api/lib/*.as
+*** DONE addParArray
+** com/vk/api/lib/*.as [54%]
 *** DONE [#A] Variables.as
     public static var user_id: String;
     public static var session: String;
@@ -13,16 +12,17 @@
 *** DONE [#A] HighScores.as
 **** getHighScores.as
 **** setUserScore.as
-*** TODO Geo.as
+*** DONE Geo.as
 **** getCities
 **** getCountries
-*** TODO Messages.as
+*** DONE Messages.as
 **** getMessages
 **** sendMessage
 *** DONE Misc.as
 **** getServerTime.as
+
+*** DONE User.as
 **** getAds.as
-*** TODO User.as
 **** isAppUser
 **** getProfiles
 **** getFriends

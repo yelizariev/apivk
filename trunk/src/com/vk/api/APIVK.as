@@ -106,23 +106,28 @@ package com.vk.api
 		 */
 		public static function set method (value: String): void
 		{
-			addPar('method', value);
+			_params.push(new Parameter('method', value));
 		}
 
 		/**
 		 * Добавить параметр в список параметров запроса.
+		 *
+		 * @param name имя параметра
+		 * @param value значение параметра
 		 */
-		public static function addPar(name: String, value: String): void{
+		public static function addPar(name: String, value: String): void
+		{
 			_params.push(new Parameter(name, value));
 		}
+
 		/**
-		 * Добавить параметр в список параметров запроса.
-		 * <p>Используется для случаев, когда value может
-		 * содержать "плохие" символы.</p><p><code>TODO</code></p>
+		 * Добавить параметр, значение которого есть список значений
+		 *
+		 * @param list список параметров.
 		 */
-		public static function addParSafe(name: String, value: String): void{
-			//TODO
-			addPar(name, value);
+		public static function addParArray(name: String, list: Array): void
+		{
+			_params.push(new Parameter(name, list.join(',')));
 		}
 
 		/**

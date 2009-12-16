@@ -1,3 +1,19 @@
+2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* User.as: init version
+
+	* UserSett.as: init version
+
+	* UserNameCase.as: init version
+
+	* UserField.as: init version
+
+	* Geo.as: init version
+
+	* Messages.as: init version
+
+	* Misc.as: добавлен метод setNameInMenu
+
 2009-12-13  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Misc.as: init version

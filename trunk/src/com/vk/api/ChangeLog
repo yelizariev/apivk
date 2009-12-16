@@ -1,3 +1,8 @@
+2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* APIVK.as: удален метод addParSafe
+	добавлен метод addParArray
+
 2009-12-11  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* APIVK.as: Fix: import
