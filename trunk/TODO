@@ -36,18 +36,12 @@
 *** TODO [#C] Pages.as
 *** TODO [#C] Photos.as
 *** TODO [#C] Questions.as
-* Утилиты
-** [#A] ant
-*** DONE ExampleStatic
-** DONE [#B] asdoc
-** DONE [#C] release-tool
 * Примеры
 ** unixtime
 *** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
-* test-app
-** TODO Блэкджек
-** TODO Шлюхи
-** TODO Можно грабить корованы
+** queue
+   * создается очередь для отправки запросов через интервал
+   * addReq(req, onSuccess, onError)
 * README
 ** TODO Пояснение про sandbox при локальном запуске
    * Error #2044: Unhandled securityError:. text=Error #2048: Security
