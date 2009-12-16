@@ -30,7 +30,6 @@
 			 output="lib/apivk.swc"
 			 incremental="true"
 			 >
-			<source-path path-element="lib"/>
 			<include-sources
 				 dir="src"
 				 includes="**/*.as"
@@ -48,7 +47,6 @@
 			 output="lib/apivk_standalone.swc"
 			 incremental="true"
 			 >
-			<source-path path-element="src"/>
 			<library-path
 				 dir="deps/lib"
 				 includes="as3crypto.swc"
