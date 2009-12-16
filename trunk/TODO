@@ -39,7 +39,7 @@
 * Примеры
 ** unixtime
 *** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
-** queue
+** DONE queue
    * создается очередь для отправки запросов через интервал
    * addReq(req, onSuccess, onError)
 * README
