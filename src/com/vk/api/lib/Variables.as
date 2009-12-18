@@ -257,13 +257,13 @@ package com.vk.api.lib
 			return APIVK.req();
 		}
 		private static function checkUserIDGet(key: uint): void{
-			if (user_id != "")
+			if (user_id == "")
 				return;
 			if ((1280 <= key) && (key <= 1791))
 				APIVK.addPar('user_id', user_id);
 		}
 		private static function checkUserIDPut(key: uint): void{
-			if (user_id != "")
+			if (user_id == "")
 				return;
 			if ((1504 <= key) && (key <= 1567))
 				APIVK.addPar('user_id', user_id);
