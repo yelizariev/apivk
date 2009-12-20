@@ -3,13 +3,13 @@ package
 	import flash.display.Sprite;
 
 	import com.vk.api.APIVK;
+	import com.vk.api.util.VKQueue;
 	import com.vk.api.lib.Messages;
 
 	import com.googlecode.apivk.util.VKQueue
 	/**
-	 * Исользуемый класс com.googlecode.apivk.util.VKQueue создает
-	 * очередь запросов для предотвращения ошибки 6 "Too many requests
-	 * per second"
+	 * Класс VKQueue создает очередь запросов для предотвращения ошибки
+	 * 6 "Too many requests per second"
 	 *
 	 */
 	public class Queue extends Sprite

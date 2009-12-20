@@ -1,0 +1,8 @@
+2009-12-20  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* VKQueue.as: com.googlecode.apivk.util.VKQueue -> com.api.vk.util.VKQueue
+
+2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* VKQueue.as: init version
+
