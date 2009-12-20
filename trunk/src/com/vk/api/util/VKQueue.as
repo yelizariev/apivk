@@ -9,7 +9,7 @@
 // Date     of current version: $Date$
 // Revision of current version: $Rev$
 
-package com.googlecode.apivk.util
+package com.vk.api.util
 {
 	import flash.net.URLRequest;
 	import flash.net.URLLoader;
