@@ -1,3 +1,8 @@
+2009-12-20  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* APIVK.as: APIVK.req() -> APIVK.req($method$);
+	удален параметр APIVK.method
+
 2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* APIVK.as: удален метод addParSafe

@@ -31,9 +31,8 @@ package com.vk.api.lib
 		                                 uid: String
 		                                 ): URLRequest
 		{
-			APIVK.method = 'isAppUser';
 			APIVK.addPar('uid', uid);
-			return APIVK.req();
+			return APIVK.req('isAppUser');
 		}
 
 		/**
@@ -63,13 +62,12 @@ package com.vk.api.lib
 		                                   name_case: String = ''
 		                        ): URLRequest
 		{
-			APIVK.method = 'getProfiles';
 			APIVK.addParArray('uids', uids);
 			if (fields)
 				APIVK.addParArray('fields', fields);
 			if (name_case != '')
 				APIVK.addPar('name_case', name_case);
-			return APIVK.req();
+			return APIVK.req('getProfiles');
 		}
 
 		/**
@@ -79,8 +77,7 @@ package com.vk.api.lib
 		 */
 		public static function getFriends(): URLRequest
 		{
-			APIVK.method = 'getFriends';
-			return APIVK.req();
+			return APIVK.req('getFriends');
 		}
 
 		/**
@@ -91,8 +88,7 @@ package com.vk.api.lib
 		 */
 		public static function getUserBalance(): URLRequest
 		{
-			APIVK.method = 'getUserBalance';
-			return APIVK.req();
+			return APIVK.req('getUserBalance');
 		}
 
 		/**
@@ -119,8 +115,7 @@ package com.vk.api.lib
 		 */
 		public static function getUserSettings(): URLRequest
 		{
-			APIVK.method = 'getUserSettings';
-			return APIVK.req();
+			return APIVK.req('getUserSettings');
 		}
 
 		/**
@@ -130,8 +125,7 @@ package com.vk.api.lib
 		 */
 		public static function getGroups(): URLRequest
 		{
-			APIVK.method = 'getGroups';
-			return APIVK.req();
+			return APIVK.req('getGroups');
 		}
 
 		/**
@@ -148,10 +142,9 @@ package com.vk.api.lib
 		                                     gids: Array = null
 		                                     ): URLRequest
 		{
-			APIVK.method = 'getGroupsFull';
 			if (gids)
 				APIVK.addParArray('gids', gids);
-			return APIVK.req();
+			return APIVK.req('getGroupsFull');
 		}
 	}
 }
