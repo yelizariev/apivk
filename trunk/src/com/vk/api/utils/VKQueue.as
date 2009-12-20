@@ -9,7 +9,7 @@
 // Date     of current version: $Date$
 // Revision of current version: $Rev$
 
-package com.vk.api.util
+package com.vk.api.utils
 {
 	import flash.net.URLRequest;
 	import flash.net.URLLoader;
