@@ -17,23 +17,53 @@ package com.vk.api.util
 	import flash.events.TimerEvent;
 	import flash.events.Event;
 
+	import com.serialization.json.JSON;
+
 	/**
-	 * Класс организует очередь для запросов URLRequest и проверяет
-	 * ответ на верхний теги error
+	 * Создание очереди для запросов URLRequest, парсинг ответа.
+	 * <p>Используемый алгоритм: </p>
+	 * <ul>
+	 *
+	 *   <li>Если таймер не запущен, за запрос отправляется</li>
+	 *
+	 *   <li>Если таймер запущен, за запрос добавляется в очередь</lI>
+	 *
+	 *   <li>Если в ответе получили error 6, то добавляем запрос в
+	 *   очередь, запускаем таймер</li>
+	 *
+	 *   <li>По истечению таймера отправляем запрос. Если очередь не
+	 *   пуста, то таймер запускаем снова.</li>
+	 * </ul>
+	 *
+	 * <p>Таким образом некоторые наборы запросов отправляются
+	 * одновременно и ответ от них может быть получен в порядке,
+	 * отличном от порядка добавления запроса в очередеть (т.е. через
+	 * функцию <code>VKQueue.addReq</code></p>
 	 */
 	public class VKQueue
 	{
-		private static var _queue: Array = [];
+		private static var _queue: Array = []; // = [Record]
 		private static var _timer: Timer;
-
+		private static var _isJSON: Boolean;
 		/**
-		 * @param delay интервал между запросами в миллисекундах
+		 * Инициализация.
+		 *
+		 * @param delay интервал до отправки следующиего запроса в
+		 * случае когда получена ошибка 6 "Too many requests per second"
+		 *
+		 * @param format формат данных получаемых сервера. Допустимые
+		 * значения: <code>"JSON"</code>, <code>"XML"</code>
 		 */
-		public static function init(delay: Number): void
+		public static function init(
+		                            delay: Number = 400,
+		                            format: String = 'JSON'
+		                            ): void
 		{
-			_timer = new Timer(delay);
+			_isJSON = (format == "JSON");
+			_timer = new Timer(delay, 1);
 			_timer.addEventListener(TimerEvent.TIMER, onTimer);
 		}
+
 		/**
 		 * Добавить запрос в очередь.
 		 *
@@ -41,12 +71,12 @@ package com.vk.api.util
 		 *
 		 * @param onSuccess вызывается после получения ответа в случае,
 		 * если нет тега error. В функцию передаётся полученные данные:
-		 * <code>onSuccess(data: XML)</code>
+		 * <code>onSuccess(data: Object)</code>
 		 *
 		 * @param onError вызывается в случае, если получен ответ с
 		 * тегом error. В функцию передаётся код ошибки, название
 		 * ошибки, параметры запросы: <code>onError(errorCode: String,
-		 * errorMsg: String, reqParams: XML)</code>
+		 * errorMsg: String, reqParams: *)</code>
 		 *
 		 */
 		public static function addReq(
@@ -55,54 +85,79 @@ package com.vk.api.util
 		                              onError: Function
 		                              ):void
 		{
+			var r: Record = new Record(req, onSuccess, onError);
 			if (_timer.running)
-				_queue.push(new Record(req, onSuccess, onError));
-			else{
-				makeReq(req, onSuccess, onError);
-				_timer.start();
-			}
+				_queue.push(r);
+			else
+				makeReq(r);
 		}
 
-		private static function onTimer(e: TimerEvent): void{
-			if (_queue.length == 0){
-				_timer.stop();
-				return;
-			}
-			var r: Record = _queue.shift();
-			makeReq(r.req, r.onSuccess, r.onError);
-		}
-
-		private static function makeReq(
-		                                req: URLRequest,
-		                                onSuccess: Function,
-		                                onError: Function
-		                                ):void
+		private static function makeReq(r: Record):void
 		{
 			var onComplete: Function =
 				function (e: Event): void
 				{
-					onReceive(XML(e.target.data), onSuccess, onError);
+					onReceive(e.target.data, r)
 					e.target.removeEventListener(Event.COMPLETE, onComplete);
 				}
 			var loader: URLLoader = new URLLoader();
 			loader.addEventListener(Event.COMPLETE, onComplete);
-			loader.load(req);
+			loader.load(r.req);
 		}
 
-		private static function onReceive(
-		                                  xml: XML,
-		                                  onSuccess: Function,
-		                                  onError: Function
-		                                  ): void
+		private static function onTimer(e: TimerEvent): void
 		{
-			if (xml.localName() == 'error')
-				onError(
-				        xml.error_code.toString(),
-				        xml.error_msg.toString(),
-				        XML(xml.request_params)
-				        );
-			else
-				onSuccess(xml);
+			var r: Record = _queue.shift();
+			makeReq(r.repeat());
+			_timer.reset();
+			if (_queue.length != 0)
+				_timer.start();
+		}
+
+		private static function onReceive(raw: *, r: Record): void
+		{
+			var isError: Boolean;
+			// isError means Error 6
+
+			//quick test for error 6
+			if (_isJSON)
+				isError = String(raw).slice(0, 24) ==
+				           '{"error":{"error_code":6';
+			else{
+				var pattern: RegExp = /<\?xml version="1\.0" encoding="utf-8"\?>\s*<error>\s*<error_code>6<\/error_code>/;
+				isError = (pattern.exec(raw) != null);
+			}
+			if (isError){//if error 6
+				trace('VKQueue: Error 6 "Too many requests per second" ');
+				if (r.isRepeat)
+					_queue.unshift(r);
+				else
+					_queue.push(r);
+				_timer.reset();
+				_timer.start();
+			}else{
+				// isError means any Error
+				var data: Object;
+				if (_isJSON){
+					data = JSON.deserialize(raw);
+					isError = Boolean(data.error);
+					if (isError)
+						data = data.error;
+					else
+						data = data.response;
+				}else{
+					data = XML(raw);
+					isError = (data.localName() == 'error');
+				}
+				if (isError)//if any error
+					r.onError(
+					          data.error_code.toString(),
+					          data.error_msg.toString(),
+					          data.request_params
+					          );
+				else
+					r.onSuccess(data);
+			}
 		}
 	}
 }
@@ -113,6 +168,9 @@ class Record
 	public var req: URLRequest;
 	public var onSuccess: Function;
 	public var onError: Function;
+	//если запрос отправляется повторноев связи с ошибкой 6:
+	public var isRepeat: Boolean = false;
+
 	public function Record(
 	                       req: URLRequest,
 	                       onSuccess: Function,
@@ -121,6 +179,11 @@ class Record
 	{
 		this.req       = req;
 		this.onSuccess = onSuccess;
-		this.onError   = onError
-			}
+		this.onError   = onError;
+	}
+	public function repeat(): Record
+	{
+		isRepeat = true;
+		return this;
+	}
 }

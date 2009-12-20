@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="apivk example with queue" basedir="." default="swf">
 	<property file="../../build.properties" />
-	<property
-		 name="lib.dir"
-		 value="../../lib"
-		 />
-	<property
-		 name="apivk.standalone.swc"
-		 value="apivk_standalone.swc"
-		 />
 	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
 	<target name="apivk-sa">
 		<ant
@@ -28,8 +20,8 @@
 			<load-config filename="${flex.config}" />
 			<source-path path-element="src"/>
 			<library-path
-				 dir="${lib.dir}"
-				 includes="${apivk.standalone.swc}"
+				 dir="../../lib"
+				 includes="apivk_standalone.swc"
 				 />
 		</mxmlc>
 	</target>
