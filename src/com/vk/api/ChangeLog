@@ -2,6 +2,8 @@
 
 	* APIVK.as: APIVK.req() -> APIVK.req($method$);
 	удален параметр APIVK.method
+	удален параметр APIVK.format
+	в APIVK.init() добавлен параметр format
 
 2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
 

@@ -31,14 +31,7 @@ package com.vk.api
 	{
 		private static const API_VERSION: String = '2.0';
 
-		/**
-		 * Определяет формат возвращаемых данных.
-		 *
-		 * @default 'XML'
-		 * @see #XML
-		 * @see #JSON
-		 */
-		public static var format: String = APIVK.XML;
+		private static var _isJSON: Boolean;
 		public static const XML : String = 'XML';
 		public static const JSON: String = 'JSON';
 
@@ -80,6 +73,8 @@ package com.vk.api
 		 *
 		 * @param secret секрет приложения.
 		 *
+		 * @param format формат возвращаемых данных
+		 *
 		 * @param isTestMode если этот параметр равен true, разрешает
 		 * тестовые запросы к данным приложения. При этом аутентификация
 		 * не проводится и считается, что текущий пользователь – это автор
@@ -91,6 +86,7 @@ package com.vk.api
 		                            viewer_id : String,
 		                            api_id    : String,
 		                            secret    : String,
+		                            format    : String = JSON,
 		                            isTestMode: Boolean = false
 		                            ): void
 		{
@@ -98,6 +94,7 @@ package com.vk.api
 			_viewerID   = viewer_id;
 			_apiID      = api_id;
 			_secret     = secret;
+			_isJSON     = (format == JSON);
 			_isTestMode = isTestMode;
 		}
 
@@ -136,12 +133,12 @@ package com.vk.api
 		 */
 		public static function req(method: String): URLRequest{
 			_params.push(new Parameter('api_id', _apiID     ));
-			_params.push(new Parameter('method', method     ));
-			_params.push(new Parameter('v'     , API_VERSION));
-			if (format == JSON)
+			if (_isJSON)
 				_params.push(new Parameter('format', JSON));
+			_params.push(new Parameter('method', method     ));
 			if (_isTestMode)
 				_params.push(new Parameter('test_mode', '1'));
+			_params.push(new Parameter('v'     , API_VERSION));
 			_params.push(new Parameter('sig'   , getSig(_params)));
 
 			var req: URLRequest = new URLRequest();

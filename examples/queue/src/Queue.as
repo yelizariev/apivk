@@ -6,7 +6,6 @@ package
 	import com.vk.api.util.VKQueue;
 	import com.vk.api.lib.Messages;
 
-	import com.googlecode.apivk.util.VKQueue
 	/**
 	 * Класс VKQueue создает очередь запросов для предотвращения ошибки
 	 * 6 "Too many requests per second"
@@ -21,9 +20,13 @@ package
 			           '1857932', //viewer_id
 			           '1735731', //api_id
 			           'secret', //secret
+			           APIVK.XML, //format
 			           true //isTestMode
 			           );
-			VKQueue.init(400);// интервал между запросами в миллисекундах
+			VKQueue.init(
+			             400,// интервал между запросами в миллисекундах
+			             APIVK.XML //формат ответа от сервера
+			             );
 
 			VKQueue.addReq(Messages.sendMessage('H'), onSent, onError);
 			VKQueue.addReq(Messages.sendMessage('e'), onSent, onError);
@@ -39,20 +42,20 @@ package
 			VKQueue.addReq(Messages.sendMessage('d'), onSent, onError);
 			VKQueue.addReq(Messages.sendMessage('!'), onSent, onError);
 
-			VKQueue.addReq(Messages.getMessages(), onReceived, onError);
+			VKQueue.addReq(Messages.getMessages(), onReceive, onError);
 		}
-		private static function onSent(data: XML): void
+		private static function onSent(data: Object): void
 		{
 			trace('msg sent');
 		}
-		private static function onReceived(data: XML): void
+		private static function onReceive(data: Object): void
 		{
 			trace('receive:\n'+data);
 		}
 		private static function onError(
 		                         errorCode: String,
 		                         errorMsg: String,
-		                         reqParams: XML
+		                         reqParams: *
 		                         ): void
 		{
 			trace('Error '+errorCode+': '+errorMsg);

@@ -36,7 +36,7 @@
 				 />
 			<external-library-path
 				 dir="deps/lib"
-				 includes="as3crypto.swc"
+				 includes="as3crypto.swc JSONLite.swc"
 				 append="true"
 				 />
 		</compc>
@@ -49,7 +49,7 @@
 			 >
 			<library-path
 				 dir="deps/lib"
-				 includes="as3crypto.swc"
+				 includes="as3crypto.swc JSONLite.swc"
 				 />
 			<include-sources
 				 dir="src"
