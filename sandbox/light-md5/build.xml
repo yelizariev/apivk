@@ -34,11 +34,6 @@
 				 dir="src"
 				 includes="**/*.as"
 				 />
-			<external-library-path
-				 dir="deps/lib"
-				 includes="as3crypto.swc"
-				 append="true"
-				 />
 		</compc>
 	</target>
 
@@ -47,10 +42,6 @@
 			 output="lib/apivk_standalone.swc"
 			 incremental="true"
 			 >
-			<library-path
-				 dir="deps/lib"
-				 includes="as3crypto.swc"
-				 />
 			<include-sources
 				 dir="src"
 				 includes="**/*.as"
