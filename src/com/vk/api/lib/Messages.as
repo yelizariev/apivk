@@ -51,11 +51,10 @@ package com.vk.api.lib
 		                                   session: String = '0'
 		                                   ): URLRequest
 		{
-			APIVK.method = 'sendMessage';
 			APIVK.addPar('message', message);
 			if (session != '0')
 				APIVK.addPar('session', session);
-			return APIVK.req();
+			return APIVK.req('sendMessage');
 		}
 
 		/**
@@ -76,12 +75,11 @@ package com.vk.api.lib
 		                        messages_to_get: String = '0'
 		                        ): URLRequest
 		{
-			APIVK.method = 'getMessages';
 			if (session != '0')
 				APIVK.addPar('session', session);
 			if (messages_to_get != '0')
 				APIVK.addPar('messages_to_get', messages_to_get);
-			return APIVK.req();
+			return APIVK.req('getMessages');
 		}
 	}
 }

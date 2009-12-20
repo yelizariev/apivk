@@ -43,9 +43,8 @@ package com.vk.api.lib
 		                                    score: String
 		                                    ): URLRequest
 		{
-			APIVK.method = 'setUserScore';
 			APIVK.addPar('score', score);
-			return APIVK.req();
+			return APIVK.req('setUserScore');
 		}
 
 		/**
@@ -55,8 +54,7 @@ package com.vk.api.lib
 		 */
 		public static function getHighScores(): URLRequest
 		{
-			APIVK.method = 'getHighScores';
-			return APIVK.req();
+			return APIVK.req('getHighScores');
 		}
 	}
 }

@@ -205,11 +205,10 @@ package com.vk.api.lib
 		                        key: uint
 		                        ): URLRequest
 		{
-			APIVK.method = 'getVariable';
 			APIVK.addPar('key', key.toString());
 			checkUserIDGet(key);
 			checkSession(key);
-			return APIVK.req();
+			return APIVK.req('getVariable');
 		}
 
 		/**
@@ -227,12 +226,11 @@ package com.vk.api.lib
 		                                    count: uint
 		                        ): URLRequest
 		{
-			APIVK.method = 'getVariables';
 			APIVK.addPar('key',   key.toString()   );
 			APIVK.addPar('count', count.toString() );
 			checkUserIDGet(key);
 			checkSession(key);
-			return APIVK.req();
+			return APIVK.req('getVariables');
 		}
 
 		/**
@@ -249,12 +247,11 @@ package com.vk.api.lib
 		                        value: String
 		                        ): URLRequest
 		{
-			APIVK.method = 'putVariable';
 			APIVK.addPar('key',   key.toString() );
 			APIVK.addPar('value', value          );
 			checkUserIDPut(key);
 			checkSession(key);
-			return APIVK.req();
+			return APIVK.req('putVariable');
 		}
 		private static function checkUserIDGet(key: uint): void{
 			if (user_id == "")

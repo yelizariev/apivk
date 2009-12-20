@@ -102,14 +102,6 @@ package com.vk.api
 		}
 
 		/**
-		 * Задать значение метода API.
-		 */
-		public static function set method (value: String): void
-		{
-			_params.push(new Parameter('method', value));
-		}
-
-		/**
 		 * Добавить параметр в список параметров запроса.
 		 *
 		 * @param name имя параметра
@@ -142,8 +134,9 @@ package com.vk.api
 		 * @see #addPar()
 		 * @see #addParSafe()
 		 */
-		public static function req(): URLRequest{
+		public static function req(method: String): URLRequest{
 			_params.push(new Parameter('api_id', _apiID     ));
+			_params.push(new Parameter('method', method     ));
 			_params.push(new Parameter('v'     , API_VERSION));
 			if (format == JSON)
 				_params.push(new Parameter('format', JSON));

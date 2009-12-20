@@ -30,9 +30,8 @@ package com.vk.api.lib
 		                                 cids: Array
 		                                 ): URLRequest
 		{
-			APIVK.method = 'getCities';
 			APIVK.addParArray('cids', cids);
-			return APIVK.req();
+			return APIVK.req('getCities');
 		}
 
 		/**
@@ -46,9 +45,8 @@ package com.vk.api.lib
 		                                    cids: Array
 		                                    ): URLRequest
 		{
-			APIVK.method = 'getCountries';
 			APIVK.addParArray('cids', cids);
-			return APIVK.req();
+			return APIVK.req('getCountries');
 		}
 	}
 }

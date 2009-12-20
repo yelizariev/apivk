@@ -26,8 +26,7 @@ package com.vk.api.lib
 		 */
 		public static function getServerTime(): URLRequest
 		{
-			APIVK.method = 'getServerTime';
-			return APIVK.req();
+			return APIVK.req('getServerTime');
 		}
 
 		/**
@@ -43,9 +42,8 @@ package com.vk.api.lib
 		                        count: String = '10'
 		                        ): URLRequest
 		{
-			APIVK.method = 'getAds';
 			APIVK.addPar('count', count);
-			return APIVK.req();
+			return APIVK.req('getAds');
 		}
 
 		/**
@@ -64,9 +62,8 @@ package com.vk.api.lib
 		                                     name: String
 		                                     ): URLRequest
 		{
-			APIVK.method = 'setNameInMenu';
 			APIVK.addPar('name', name);
-			return APIVK.req();
+			return APIVK.req('setNameInMenu');
 		}
 	}
 }
