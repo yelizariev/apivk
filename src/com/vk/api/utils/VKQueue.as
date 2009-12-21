@@ -81,8 +81,8 @@ package com.vk.api.utils
 		 */
 		public static function addReq(
 		                              req: URLRequest,
-		                              onSuccess: Function,
-		                              onError: Function
+		                              onSuccess: Function = null,
+		                              onError: Function = null
 		                              ):void
 		{
 			var r: Record = new Record(req, onSuccess, onError);
@@ -150,13 +150,15 @@ package com.vk.api.utils
 					isError = (data.localName() == 'error');
 				}
 				if (isError)//if any error
-					r.onError(
-					          data.error_code.toString(),
-					          data.error_msg.toString(),
-					          data.request_params
+					if (r.onError)
+						r.onError(
+						          data.error_code.toString(),
+						          data.error_msg.toString(),
+						          data.request_params
 					          );
 				else
-					r.onSuccess(data);
+					if (r.onSuccess)
+						r.onSuccess(data);
 			}
 		}
 	}
