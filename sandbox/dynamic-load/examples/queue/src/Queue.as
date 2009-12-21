@@ -2,9 +2,7 @@ package
 {
 	import flash.display.Sprite;
 
-	import com.vk.api.APIVK;
-	import com.vk.api.utils.VKQueue;
-	import com.vk.api.lib.Messages;
+	import com.googlecode.apivk.loader.API;
 
 	/**
 	 * Класс VKQueue создает очередь запросов для предотвращения ошибки
@@ -15,34 +13,38 @@ package
 	{
 		public function Queue()
 		{
-			APIVK.init(
+			API.load(init, 'http://cs4726.vkontakte.ru/u1857932/15ea5149a702f8.zip');
+		}
+		private function init(): void
+		{
+			API.APIVK.init(
 			           'http://api.vkontakte.ru/api.php', //api_url
 			           '1857932', //viewer_id
 			           '1735731', //api_id
 			           'secret', //secret
-			           APIVK.JSON, //format
+			           API.APIVK.JSON, //format
 			           true //isTestMode
 			           );
-			VKQueue.init(
+			API.VKQueue.init(
 			             400,// интервал между запросами в миллисекундах
-			             APIVK.JSON //формат ответа от сервера
+			             API.APIVK.JSON //формат ответа от сервера
 			             );
 
-			VKQueue.addReq(Messages.sendMessage('H'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('e'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('l'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('l'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('o'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage(','), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage(' '), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('W'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('o'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('r'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('l'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('d'), onSent, onError);
-			VKQueue.addReq(Messages.sendMessage('!'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('H'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('e'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('l'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('l'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('o'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage(','), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage(' '), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('W'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('o'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('r'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('l'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('d'), onSent, onError);
+			API.VKQueue.addReq(API.Messages.sendMessage('!'), onSent, onError);
 
-			VKQueue.addReq(Messages.getMessages(), onReceive, onError);
+			API.VKQueue.addReq(API.Messages.getMessages(), onReceive, onError);
 		}
 		private static function onSent(data: Object): void
 		{

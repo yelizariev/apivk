@@ -11,7 +11,6 @@
 
 package com.vk.api.lib
 {
-	import com.vk.api.APIVK;
 	import flash.net.URLRequest;
 
 	/**
