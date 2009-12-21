@@ -17,6 +17,7 @@ package
 			           '1857932', //viewer_id
 			           '1735731', //api_id
 			           'secret', //secret
+			           APIVK.JSON, //format
 			           true //isTestMode
 			           );
 			var req: URLRequest = Misc.getServerTime();
