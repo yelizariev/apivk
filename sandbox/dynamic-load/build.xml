@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="apivk.googlecode.com" basedir="." default="swc">
+	<property file="build.properties" />
+	<property name="apivk.lib.desc" value="'Реализация конкретных методов АПИ'"/>
+	<property name="doc.title.main"   value="apivk.googlecode.com"/>
+	<property name="doc.title.window" value="'Документация apivk'"/>
+	<property name="doc.version"      value="SVN"/>
+	<property name="doc.footer"       value="'v. ${doc.version}'"/>
+
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+
+	<target name="doc">
+		<exec executable="${flex.bin.asdoc}" >
+			<arg line="-source-path src deps/src"  />
+			<arg line="-doc-sources src"  />
+			<arg line="-output      docs" />
+			<arg line="-exclude-classes com.hurlant.util.Hex"/>
+			<arg line="-exclude-classes com.hurlant.crypto.hash.MD5"/>
+			<arg line="-exclude-classes com.hurlant.crypto.hash.IHash"/>
+			<arg line="-templates-path ${flex.asdoc.templates}" />
+			<arg line="-package com.vk.api.lib ${apivk.lib.desc}"/>
+			<arg line="-main-title   ${doc.title.main}"  />
+			<arg line="-window-title ${doc.title.window}"/>
+			<arg line="-footer       ${doc.footer}"      />
+		</exec>
+	</target>
+
+	<target name="swc">
+		<compc
+			 output="lib/apivk.swc"
+			 incremental="true"
+			 >
+			<include-sources
+				 dir="src"
+				 includes="**/*.as"
+				 />
+			<external-library-path
+				 dir="deps/lib"
+				 includes="as3crypto.swc JSONLite.swc"
+				 append="true"
+				 />
+		</compc>
+	</target>
+
+	<target name="swc-sa">
+		<compc
+			 output="lib/apivk_standalone.swc"
+			 incremental="true"
+			 >
+			<library-path
+				 dir="deps/lib"
+				 includes="as3crypto.swc JSONLite.swc"
+				 />
+			<include-sources
+				 dir="src"
+				 includes="**/*.as"
+				 />
+		</compc>
+	</target>
+
+	<target name="swf" depends="swc">
+		<unzip
+			 src="lib/apivk.swc"
+			 dest="lib"
+			 >
+			<patternset>
+				<include name="library.swf"/>
+			</patternset>
+			<mapper type="merge" to="apivk.swf"/>
+		</unzip>
+	</target>
+
+	<target name="swf-sa" depends="swc-sa">
+		<unzip
+			 src="lib/apivk_standalone.swc"
+			 dest="lib"
+			 >
+			<patternset>
+				<include name="library.swf"/>
+			</patternset>
+			<mapper type="merge" to="apivk_standalone.swf"/>
+		</unzip>
+	</target>
+
+</project>
