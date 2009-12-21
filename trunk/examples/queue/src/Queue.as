@@ -3,7 +3,7 @@ package
 	import flash.display.Sprite;
 
 	import com.vk.api.APIVK;
-	import com.vk.api.util.VKQueue;
+	import com.vk.api.utils.VKQueue;
 	import com.vk.api.lib.Messages;
 
 	/**
@@ -20,12 +20,12 @@ package
 			           '1857932', //viewer_id
 			           '1735731', //api_id
 			           'secret', //secret
-			           APIVK.XML, //format
+			           APIVK.JSON, //format
 			           true //isTestMode
 			           );
 			VKQueue.init(
 			             400,// интервал между запросами в миллисекундах
-			             APIVK.XML //формат ответа от сервера
+			             APIVK.JSON //формат ответа от сервера
 			             );
 
 			VKQueue.addReq(Messages.sendMessage('H'), onSent, onError);
@@ -50,7 +50,12 @@ package
 		}
 		private static function onReceive(data: Object): void
 		{
-			trace('receive:\n'+data);
+			for each (var msg: Object in data)
+				trace('time: '        + msg.time      +
+				      ', user_id: '   + msg.user_id   +
+				      ', user_name: ' + msg.user_name +
+				      ', message: '   + msg.message
+				      );
 		}
 		private static function onError(
 		                         errorCode: String,
