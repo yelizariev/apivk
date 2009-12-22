@@ -219,7 +219,7 @@
 			 password="${googlecode.password}"
 			 projectname="apivk"
 			 filename="${basedir}/trunk/loader/lib/apivk-loader.swc"
-			 targetfilename="apivk-loader.tar.gz"
+			 targetfilename="apivk-loader.swc"
 			 summary="class for dynamic load apivk.swf (>= ${version.string})"
 			 labels="Featured" />
 		<delete file="apivk.tar.gz"/>
