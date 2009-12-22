@@ -2,7 +2,7 @@
 * Структура src директории
 ** com/vk/api/APIVK.as
 *** DONE addParArray
-** com/vk/api/lib/*.as [54%]
+** com/vk/api/lib/*.as [63%]
 *** DONE [#A] Variables.as
     public static var user_id: String;
     public static var session: String;
@@ -31,7 +31,7 @@
 **** getUserSettings
 **** getGroups
 **** getGroupsFull
-*** TODO [#C] Audio.as
+*** DONE [#C] Audio.as
 *** TODO [#C] Offers.as
 *** TODO [#C] Pages.as
 *** TODO [#C] Photos.as
