@@ -94,7 +94,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#getLyrics()">getLyrics</a>(lirics_id:String):URLRequest</div>
+<a class="signatureLink" href="#getLyrics()">getLyrics</a>(lyrics_id:String):URLRequest</div>
 <div class="summaryTableDescription">[static]
    Возвращает текст аудиозаписи
       </div>
@@ -137,7 +137,7 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
 <tr class="">
 <td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
 <div class="summarySignature">
-<a class="signatureLink" href="#search()">search</a>(q:String, sort:String, lirics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</div>
+<a class="signatureLink" href="#search()">search</a>(q:String, sort:String, lyrics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</div>
 <div class="summaryTableDescription">[static]
    Возвращает список аудиозаписей в соответствии с заданным
    критерием поиска.</div>
@@ -411,12 +411,12 @@ showHideInherited();
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function getLyrics(lirics_id:String):URLRequest</code><p>
+<code>public static function getLyrics(lyrics_id:String):URLRequest</code><p>
    Возвращает текст аудиозаписи
       </p><span class="label">Parameters</span>
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td width="20px"></td><td><code><span class="label">lirics_id</span>:String</code> &mdash; id текста
+<td width="20px"></td><td><code><span class="label">lyrics_id</span>:String</code> &mdash; id текста
       </td>
 </tr>
 </table>
@@ -623,7 +623,7 @@ n      </td>
 </tr>
 </table>
 <div class="detailBody">
-<code>public static function search(q:String, sort:String, lirics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</code><p>
+<code>public static function search(q:String, sort:String, lyrics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</code><p>
    Возвращает список аудиозаписей в соответствии с заданным
    критерием поиска.
       </p><span class="label">Parameters</span>
@@ -645,7 +645,7 @@ n      </td>
 <td class="paramSpacer">&nbsp;</td>
 </tr>
 <tr>
-<td width="20px"></td><td><code><span class="label">lirics</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Если этот параметр равен <code>true</code>,
+<td width="20px"></td><td><code><span class="label">lyrics</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Если этот параметр равен <code>true</code>,
    поиск будет производиться только по тем аудиозаписям, которые
    содержат тексты.
       </td>
@@ -756,8 +756,8 @@ n      </td>
 <hr>
 <br>
 <p></p>
-<center class="copyright">v. 1.0.1</center>
+<center class="copyright">v. 1.0.2</center>
 </div>
 </body>
 </html>
-<!--v. 1.0.1-->
+<!--v. 1.0.2-->
