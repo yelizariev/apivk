@@ -14,8 +14,6 @@
 			<arg line="-source-path src deps/src loader/src"  />
 			<arg line="-doc-sources src loader/src"  />
 			<arg line="-output      docs" />
-			<arg line="-exclude-classes utils.MD5"/>
-			<arg line="-exclude-classes com.serialization.json.JSON"/>
 			<arg line="-templates-path ${flex.asdoc.templates}" />
 			<arg line="-package com.vk.api.lib ${apivk.lib.desc}"/>
 			<arg line="-main-title   ${doc.title.main}"  />
