@@ -1,0 +1,763 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Audio,com.vk.api.lib.Audio,add,deleteAudio,edit,getById,getLyrics,getUploadServer,reorder,restore,save,search,upload,get" name="keywords">
+<title>com.vk.api.lib.Audio</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Audio - Документация apivk';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">apivk.googlecode.com</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/vk/api/lib/Audio.html&amp;com/vk/api/lib/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Audio</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Audio"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Audio</td>
+</tr>
+</table>
+<p></p>
+  Работа с аудиозаписями.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#add()">add</a>(aid:String, oid:String, gid:String = ""):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Копирует аудиозапись на страницу пользователя или группы.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteAudio()">deleteAudio</a>(aid:String, oid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Удаляет аудиозапись со страницы пользователя или группы.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#edit()">edit</a>(aid:String, oid:String, artist:String, title:String, text:String, no_search:Boolean):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Редактирует данные аудиозаписи на странице пользователя или группы.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get()">get</a>(uid:String = "", gid:String = "", aids:Array = null, need_user:Boolean = false):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список аудиозаписей пользователя или группы.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getById()">getById</a>(audios:Array):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает информацию об аудиозаписях.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getLyrics()">getLyrics</a>(lirics_id:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает текст аудиозаписи
+      </div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUploadServer()">getUploadServer</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает адрес сервера для загрузки аудиозаписей.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#reorder()">reorder</a>(aid:String, after:String, before:String, oid:String = ""):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Изменяет порядок аудиозаписи, перенося ее между
+   аудиозаписями, идентификаторы которых переданы параметрами
+   after и before.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#restore()">restore</a>(aid:String, oid:String = ""):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Восстанавливает удаленную аудиозапись пользователя после удаления.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#save()">save</a>(server:String, audio:String, hash:String, artist:String = "", title:String = ""):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Сохраняет аудиозаписи после успешной загрузки.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#search()">search</a>(q:String, sort:String, lirics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список аудиозаписей в соответствии с заданным
+   критерием поиска.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#upload()">upload</a>(upload_url:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Загрузка аудиозаписей.</div>
+</td><td class="summaryTableOwnerCol">Audio</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="add()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">add</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function add(aid:String, oid:String, gid:String = ""):URLRequest</code><p>
+   Копирует аудиозапись на страницу пользователя или группы. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id аудиозаписи. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> &mdash; id владельца аудиозаписи. Если копируемая
+   аудиозапись находится на странице группы, в этом параметре
+   должно стоять значение, равное -id группы.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">gid</span>:String</code> (default = "<code></code>")<code></code> &mdash; id группы, в которую следует копировать
+   аудиозапись. Если параметр не указан, аудиозапись копируется
+   не в группу, а на страницу текущего пользователя. Если
+   аудиозапись все же копируется в группу, у текущего
+   пользователя должны быть права на эту операцию.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.add" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.add</a>
+</div>
+</div>
+<a name="deleteAudio()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteAudio</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function deleteAudio(aid:String, oid:String):URLRequest</code><p>
+   Удаляет аудиозапись со страницы пользователя или группы.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id аудиозаписи.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> &mdash; id владельца аудиозаписи. Если копируемая
+   аудиозапись находится на странице группы, в этом параметре
+   должно стоять значение, равное -id группы.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.delete" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.delete</a>
+</div>
+</div>
+<a name="edit()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">edit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function edit(aid:String, oid:String, artist:String, title:String, text:String, no_search:Boolean):URLRequest</code><p>
+   Редактирует данные аудиозаписи на странице пользователя или группы.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id аудиозаписи.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> &mdash; id владельца аудиозаписи. Если копируемая
+   аудиозапись находится на странице группы, в этом параметре
+   должно стоять значение, равное -id группы.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">artist</span>:String</code> &mdash; название исполнителя аудиозаписи.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:String</code> &mdash; название аудиозаписи.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash; текст аудиозаписи, если введен.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">no_search</span>:Boolean</code> &mdash; <code>true</code> - скрывает аудиозапись из
+   поиска по аудиозаписям.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.edit" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.edit</a>
+</div>
+</div>
+<a name="get()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function get(uid:String = "", gid:String = "", aids:Array = null, need_user:Boolean = false):URLRequest</code><p>
+   Возвращает список аудиозаписей пользователя или группы. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> (default = "<code></code>")<code></code> &mdash; id пользователя, которому принадлежат
+   аудиозаписи. По умолчанию id текущего пользователя.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">gid</span>:String</code> (default = "<code></code>")<code></code> &mdash; id группы, которой принадлежат аудиозаписи. Если
+   указан параметр gid, uid игнорируется.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; список id аудиозаписей, входящие в выборку по uid
+   или gid.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_user</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; если этот параметр равен true, сервер
+   возвратит базовую информацию о владельце аудиозаписей в
+   структуре user (id, photo, name, name_gen).
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.get" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.get</a>
+</div>
+</div>
+<a name="getById()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getById</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getById(audios:Array):URLRequest</code><p>
+   Возвращает информацию об аудиозаписях. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">audios</span>:Array</code> &mdash; список идентификаторов вида <code>[UserOwnerID,
+   AudioID]</code> или <code>[-GroupOwnerID, AudioID]</code>
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.getById" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.getById</a>
+</div>
+</div>
+<a name="getLyrics()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getLyrics</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getLyrics(lirics_id:String):URLRequest</code><p>
+   Возвращает текст аудиозаписи
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">lirics_id</span>:String</code> &mdash; id текста
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.getLyrics" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.getLyrics</a>
+</div>
+</div>
+<a name="getUploadServer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUploadServer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getUploadServer():URLRequest</code><p>
+   Возвращает адрес сервера для загрузки аудиозаписей.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.getUploadServer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.getUploadServer</a>
+</div>
+</div>
+<a name="reorder()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">reorder</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function reorder(aid:String, after:String, before:String, oid:String = ""):URLRequest</code><p>
+   Изменяет порядок аудиозаписи, перенося ее между
+   аудиозаписями, идентификаторы которых переданы параметрами
+   after и before.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id аудиозаписи, порядок которой изменяется. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">after</span>:String</code> &mdash; id аудиозаписи, после которой нужно поместить
+   аудиозапись. Если аудиозапись переносится в начало, параметр
+   может быть равен нулю.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">before</span>:String</code> &mdash; id аудиозаписи, перед которой нужно поместить
+   аудиозапись. Если аудиозапись переносится в конец, параметр
+   может быть равен нулю.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = "<code></code>")<code></code> &mdash; id владельца изменяемой аудиозаписи. По умолчанию
+   - id текущего пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.reorder" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.reorder</a>
+</div>
+</div>
+<a name="restore()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">restore</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function restore(aid:String, oid:String = ""):URLRequest</code><p>
+   Восстанавливает удаленную аудиозапись пользователя после удаления. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id удаленной аудиозаписи.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = "<code></code>")<code></code> &mdash; id владельца аудиозаписи. По умолчанию - id
+   текущего пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.restore" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.restore</a>
+</div>
+</div>
+<a name="save()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">save</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function save(server:String, audio:String, hash:String, artist:String = "", title:String = ""):URLRequest</code><p>
+   Сохраняет аудиозаписи после успешной загрузки.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">server</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   аудиофайла на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">audio</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   аудиофайла на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">hash</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   аудиофайла на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">artist</span>:String</code> (default = "<code></code>")<code></code> &mdash; автор композиции. По умолчанию берется из ID3
+   тегов.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:String</code> (default = "<code></code>")<code></code> &mdash; название композиции. По умолчанию берется из ID3
+   тегов.
+n      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.save" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.save</a>
+</div>
+</div>
+<a name="search()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">search</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function search(q:String, sort:String, lirics:Boolean = false, count:String = "30", offset:String = "0"):URLRequest</code><p>
+   Возвращает список аудиозаписей в соответствии с заданным
+   критерием поиска.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">q</span>:String</code> &mdash; строка поискового запроса. Например, The Beatles. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> &mdash; Вид сортировки. <code>'1'</code> - по
+   длительности аудиозаписи, <code>'0'</code> - по дате
+   добавления.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">lirics</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Если этот параметр равен <code>true</code>,
+   поиск будет производиться только по тем аудиозаписям, которые
+   содержат тексты.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>30</code>")<code></code> &mdash; количество возвращаемых аудиозаписей (максимум 30). 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; смещение относительно первой найденной
+   аудиозаписи для выборки определенного подмножества.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=audio.search" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=audio.search</a>
+</div>
+</div>
+<a name="upload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">upload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function upload(upload_url:String):URLRequest</code><p>
+   Загрузка аудиозаписей.
+      </p><p>Использование созданного <code>URLRequest</code> в классе
+   <code>VKQueue</code> невозможно.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">upload_url</span>:String</code> &mdash; адрес, полученный в ответе на запрос
+   <code>Audio.getUploadServer</code>
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?id=2372787" target="mm_external">http://vkontakte.ru/pages.php?id=2372787</a>
+<br>getUploadServer()</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   import flash.net.FileReference;<br/>
+   var file: FileReference;<br/>
+   function chooseFile(): void
+   {
+     var file: FileReference = new FileReference();
+     file.addEventListener(Event.SELECT, onSelect);
+     file.browse([new FileFilter("MP3 Files (mp3)", "mp3")]);
+   }<br/>
+   function onSelect(): void
+   {
+     file.addEventListener(Event.COMPLETE, onComplete);
+     file.upload(API.Audio.upload(upload_url), "file");
+   }
+   </pre></div>
+   <div class='listing'><pre>
+   // при динамической загрузке:
+   import com.vk.api.API; <br/>
+   function onComplete(e: Event): void
+   {
+     var res: Object = API.JSON.deserialize(e.target.data);
+     trace("server="+res.server);
+     trace("audio="+res.audio);
+     trace("hash=" +res.hash);
+   }<br/><br/>
+   // если библиотека включёна в приложение:
+   import com.serialization.json.JSON; <br/>
+   function onComplete(e: Event): void
+   {
+     var res: Object = JSON.deserialize(e.target.data);
+     trace("server="+res.server);
+     trace("audio="+res.audio);
+     trace("hash=" +res.hash);
+   }
+   </pre></div>
+   <p></p>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">v. 1.0.1</center>
+</div>
+</body>
+</html>
+<!--v. 1.0.1-->
