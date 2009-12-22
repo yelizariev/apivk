@@ -1,0 +1,27 @@
+1.0.0:
+0.1.1:
+  FIX:
+    * Variables.as: исправлено добавление параметра user_id
+
+0.1.0:
+  NEW:
+    * examples/:
+      * queue - создает очередь запросов для предотвращения
+        ошибки 6 "Too many requests per second"
+    * src/com/api/vk/lib:
+      * Geo.as
+      * Messages.as
+      * User.as
+      * UserField.as
+      * UserSett.as
+      * UserNameCase.as
+  FIX:
+    * APIVK.as: slice(0) -> splice(0)
+  Other:
+    * изменения в билд-файлах (build.xml)
+
+0.0.1:
+  * APIVK.as
+  * lib/HighScores.as
+  * lib/Misc.as
+  * lib/Variables.as
