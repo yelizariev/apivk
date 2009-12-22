@@ -78,15 +78,15 @@ package com.vk.api.lib
 		/**
 		 * Возвращает текст аудиозаписи
 		 *
-		 * @param lirics_id id текста
+		 * @param lyrics_id id текста
 		 *
 		 * @see http://vkontakte.ru/pages.php?o=-1&p=audio.getLyrics
 		 */
 		public static function getLyrics(
-		                                 lirics_id: String
+		                                 lyrics_id: String
 		                                 ): URLRequest
 		{
-			APIVK.addPar('lirics_id', lirics_id);
+			APIVK.addPar('lyrics_id', lyrics_id);
 			return APIVK.req('audio.getLyrics');
 		}
 
@@ -162,7 +162,7 @@ n		 *
 		public static function search(
 		                              q: String,
 		                              sort: String,
-		                              lirics: Boolean = false,
+		                              lyrics: Boolean = false,
 		                              count: String = '30',
 		                              offset: String = '0'
 		                        ): URLRequest
@@ -170,8 +170,8 @@ n		 *
 			APIVK.addPar('q', q);
 			APIVK.addPar('sort', sort);
 			APIVK.addPar('count', count);
-			if (lirics)
-				APIVK.addPar('lirics', '1');
+			if (lyrics)
+				APIVK.addPar('lyrics', '1');
 			if (offset != '0')
 				APIVK.addPar('offset', offset);
 			return APIVK.req('audio.search');
