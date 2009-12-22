@@ -1,3 +1,7 @@
+2009-12-22  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Audio.as: init version
+
 2009-12-20  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* *.as: APIVK.req() -> APIVK.req($method$);
