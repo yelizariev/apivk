@@ -13,6 +13,7 @@ package com.vk.api.lib
 {
 	import com.vk.api.APIVK;
 	import flash.net.URLRequest;
+	import flash.net.URLRequestHeader;
 
 	/**
 	 * Работа с аудиозаписями.
@@ -217,10 +218,10 @@ n		 *
 		 *
 		 * @see http://vkontakte.ru/pages.php?o=-1&p=audio.delete
 		 */
-		public static function delete(
-		                              aid: String,
-		                              oid: String
-		                              ): URLRequest
+		public static function deleteAudio(
+		                                   aid: String,
+		                                   oid: String
+		                                   ): URLRequest
 		{
 			APIVK.addPar('aid', aid);
 			APIVK.addPar('oid', oid);
@@ -276,7 +277,7 @@ n		 *
 		 * @param oid id владельца аудиозаписи. По умолчанию - id
 		 * текущего пользователя.
 		 *
-		 * @see 
+		 * @see http://vkontakte.ru/pages.php?o=-1&p=audio.restore
 		 */
 		public static function restore(
 		                               aid: String,
@@ -322,6 +323,68 @@ n		 *
 			if (oid != '')
 				APIVK.addPar('oid', oid);
 			return APIVK.req('audio.reorder');
+		}
+
+		/**
+		 * Загрузка аудиозаписей.
+		 *
+		 * <p>Использование созданного <code>URLRequest</code> в классе
+		 * <code>VKQueue</code> невозможно.</p>
+		 *
+		 * @param upload_url адрес, полученный в ответе на запрос
+		 * <code>Audio.getUploadServer</code>
+		 *
+		 * @see http://vkontakte.ru/pages.php?id=2372787
+		 * @see getUploadServer()
+		 * @example
+		 * <listing>
+		 * import flash.net.FileReference;<br/>
+		 * var file: FileReference;<br/>
+		 * function chooseFile(): void
+		 * {
+		 *   var file: FileReference = new FileReference();
+		 *   file.addEventListener(Event.SELECT, onSelect);
+		 *   file.browse([new FileFilter("MP3 Files (*.mp3)", "*.mp3")]);
+		 * }<br/>
+		 * function onSelect(): void
+		 * {
+		 *   file.addEventListener(Event.COMPLETE, onComplete);
+		 *   file.upload(API.Audio.upload(upload_url), "file");
+		 * }
+		 * </listing>
+		 * <listing>
+		 * // при динамической загрузке:
+		 * import com.vk.api.API; <br/>
+		 * function onComplete(e: Event): void
+		 * {
+		 *   var res: Object = API.JSON.deserialize(e.target.data);
+		 *   trace("server="+res.server);
+		 *   trace("audio="+res.audio);
+		 *   trace("hash=" +res.hash);
+		 * }<br/><br/>
+		 * // если библиотека включёна в приложение:
+		 * import com.serialization.json.JSON; <br/>
+		 * function onComplete(e: Event): void
+		 * {
+		 *   var res: Object = JSON.deserialize(e.target.data);
+		 *   trace("server="+res.server);
+		 *   trace("audio="+res.audio);
+		 *   trace("hash=" +res.hash);
+		 * }
+		 * </listing>
+		 */
+		public static function upload(
+		                        upload_url: String
+		                        ): URLRequest
+		{
+			var req: URLRequest = new URLRequest(upload_url);
+			req.method = 'POST';
+			req.requestHeaders.push(new URLRequestHeader(
+			                                             "Cache-Control",
+			                                             "no-cache"
+			                                             )
+			                        );
+			return req;
 		}
 	 }
  }

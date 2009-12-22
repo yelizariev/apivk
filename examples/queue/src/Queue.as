@@ -3,7 +3,7 @@ package
 	import flash.display.Sprite;
 
 	import com.vk.api.APIVK;
-	import com.vk.api.utils.VKQueue;
+	import com.vk.api.VKQueue;
 	import com.vk.api.lib.Messages;
 
 	/**
