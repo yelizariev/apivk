@@ -14,8 +14,7 @@ package com.vk.api
 	import flash.net.URLRequest;
 	import flash.net.URLVariables;
 	import flash.utils.ByteArray;
-	import com.hurlant.crypto.hash.MD5;
-	import com.hurlant.util.Hex;
+	import utils.MD5;
 
 	/**
 	 * Главный класс библиотеки apivk.
@@ -158,10 +157,7 @@ package com.vk.api
 			_params.sortOn('name');
 			var str: String = _viewerID + _params.join('') + _secret;
 			//trace('str for sig: '+str);
-			var bytes:ByteArray = new ByteArray();
-			bytes.writeUTFBytes(str);
-			bytes = new MD5().hash(bytes);
-			return Hex.fromArray(bytes);
+			return MD5.encrypt(str);
 		}
 	}
 }
