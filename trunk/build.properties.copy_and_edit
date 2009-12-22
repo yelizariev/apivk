@@ -12,7 +12,10 @@ FLEX_HOME =
 # References to the Flex SDK compilers
 # asdoc = asdoc     # unix
 # asdoc = asdoc.exe # windows
+# optimizer = optimizer     # unix
+# optimizer = optimizer.exe # windows
 asdoc = 
+optimizer = 
 
 # -----------------------------------------------------------------
 # Flex Paths - SHOULD NOT NEED TO MODIFY
@@ -29,3 +32,6 @@ flex.bin.asdoc = ${FLEX_HOME}/bin/${asdoc}
 
 # The location of the asdoc templates
 flex.asdoc.templates = ${FLEX_HOME}/asdoc/templates
+
+# The location of the optimizer
+flex.bin.optimizer = ${FLEX_HOME}/bin/${optimizer}

@@ -149,15 +149,15 @@ package com.vk.api
 					data = XML(raw);
 					isError = (data.localName() == 'error');
 				}
-				if (isError)//if any error
-					if (Boolean(r.onError))
+				if (isError){//if any error
+					if (r.onError != null)
 						r.onError(
 						          data.error_code.toString(),
 						          data.error_msg.toString(),
 						          data.request_params
 					          );
-				else
-					if (Boolean(r.onSuccess))
+				}else
+					if (r.onSuccess != null)
 						r.onSuccess(data);
 			}
 		}

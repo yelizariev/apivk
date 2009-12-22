@@ -13,7 +13,6 @@ package com.vk.api
 {
 	import flash.net.URLRequest;
 	import flash.net.URLVariables;
-	import flash.utils.ByteArray;
 	import utils.MD5;
 
 	/**
