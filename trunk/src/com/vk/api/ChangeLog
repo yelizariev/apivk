@@ -1,5 +1,7 @@
 2009-12-22  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* APIVK.as: as3crypto заменен на utils.MD5
+
 	* VKQueue.as: com.vk.api.utils.VKQueue -> com.vk.api.VKQueue
 
 	* ChangeLog: merge ChangeLogs (this and utils/ChangeLog)
