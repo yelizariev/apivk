@@ -150,14 +150,14 @@ package com.vk.api.utils
 					isError = (data.localName() == 'error');
 				}
 				if (isError)//if any error
-					if (r.onError)
+					if (Boolean(r.onError))
 						r.onError(
 						          data.error_code.toString(),
 						          data.error_msg.toString(),
 						          data.request_params
 					          );
 				else
-					if (r.onSuccess)
+					if (Boolean(r.onSuccess))
 						r.onSuccess(data);
 			}
 		}

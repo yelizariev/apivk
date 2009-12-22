@@ -1,3 +1,7 @@
+2009-12-22  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* VKQueue.as: 'if (r.onError)' -> 'if (Boolean(r.onError))' (чтобы убрать warnings компилятора
+
 2009-12-21  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* VKQueue.as: параметры onError, onSuccess не обязательны
