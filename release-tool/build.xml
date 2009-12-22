@@ -74,7 +74,6 @@
 			 antfile="trunk/build.xml"
 			 inheritAll="false">
 			<target name="swf"/>
-			<target name="swf-sa"/>
 		</ant>
 	</target>
 
@@ -186,7 +185,7 @@
 			 projectname="apivk"
 			 filename="${basedir}/trunk/lib/apivk.swc"
 			 targetfilename="apivk-${version.string}.swc"
-			 summary="apivk only. Dependecies not include"
+			 summary="use for static linking"
 			 labels="Featured" />
 		<gcupload
 			 username="${googlecode.username}"
@@ -194,23 +193,7 @@
 			 projectname="apivk"
 			 filename="${basedir}/trunk/lib/apivk.swf"
 			 targetfilename="apivk-${version.string}.swf"
-			 summary="extracted apivk-${version.string}.swc"
-			 labels="Featured" />
-		<gcupload
-			 username="${googlecode.username}"
-			 password="${googlecode.password}"
-			 projectname="apivk"
-			 filename="${basedir}/trunk/lib/apivk_standalone.swc"
-			 targetfilename="apivk-${version.string}_standalone.swc"
-			 summary="apivk + part of as3crypto"
-			 labels="Featured" />
-		<gcupload
-			 username="${googlecode.username}"
-			 password="${googlecode.password}"
-			 projectname="apivk"
-			 filename="${basedir}/trunk/lib/apivk_standalone.swf"
-			 targetfilename="apivk-${version.string}_standalone.swf"
-			 summary="extracted apivk-${version.string}_standalone.swc"
+			 summary="extracted and optimized apivk-${version.string}.swc. Use for dynamic loading."
 			 labels="Featured" />
 	</target>
 	<target
@@ -224,6 +207,20 @@
 			 filename="${basedir}/apivk.tar.gz"
 			 targetfilename="apivk-${version.string}.tar.gz"
 			 summary="source, binary, docs, examples, etc."
+			 labels="Featured" />
+		<delete file="apivk.tar.gz"/>
+	</target>
+	<target
+		 name="loader"
+		 depends="version.read"
+		 >
+		<gcupload
+			 username="${googlecode.username}"
+			 password="${googlecode.password}"
+			 projectname="apivk"
+			 filename="${basedir}/trunk/loader/lib/apivk-loader.swc"
+			 targetfilename="apivk-loader.tar.gz"
+			 summary="class for dynamic load apivk.swf (>= ${version.string})"
 			 labels="Featured" />
 		<delete file="apivk.tar.gz"/>
 	</target>
