@@ -95,7 +95,6 @@ package com.vk.api
 				APIVK   = getDef('com.vk.api.APIVK');
 				VKQueue = getDef('com.vk.api.VKQueue');
 
-				Messages     = getDef('com.vk.api.lib.Messages');
 				Audio        = getDef('com.vk.api.lib.Audio');
 				Geo          = getDef('com.vk.api.lib.Geo');
 				HighScores   = getDef('com.vk.api.lib.HighScores');
