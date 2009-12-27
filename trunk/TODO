@@ -2,7 +2,7 @@
 * Структура src директории
 ** com/vk/api/APIVK.as
 *** DONE addParArray
-** com/vk/api/lib/*.as [63%]
+** com/vk/api/lib/*.as [81%]
 *** DONE [#A] Variables.as
     public static var user_id: String;
     public static var session: String;
@@ -34,8 +34,8 @@
 *** DONE [#C] Audio.as
 *** TODO [#C] Offers.as
 *** TODO [#C] Pages.as
-*** TODO [#C] Photos.as
-*** TODO [#C] Questions.as
+*** DONE [#C] Photos.as
+*** DONE [#C] Questions.as
 * Примеры
 ** unixtime
 *** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
@@ -50,3 +50,6 @@
      cannot load data from http://api.vkontakte.ru/api.php.
    * http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04a.html#119065
 ** TODO build.properties.copy_and_edit
+* документация
+** добавить примеры
+** TODO улучшить таблицу variables

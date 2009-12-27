@@ -10,7 +10,7 @@
 			<load-config filename="${flex.config}" />
 			<library-path
 				 dir="../../lib"
-				 includes="apivk_standalone.swc"
+				 includes="apivk.swc"
 				 />
 		</mxmlc>
 	</target>
