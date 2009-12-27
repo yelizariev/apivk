@@ -1,6 +1,6 @@
 *Как создать построчный комментарий*
-
-  # Найти файл ([http://code.google.com/p/apivk/source/browse/trunk Source->Browse])
+  # Залогиниться, используя google-аккаунт
+  # Найти файл нужный файл ([http://code.google.com/p/apivk/source/browse/trunk Source->Browse])
   # Двойной клик по нужной строчке кода
-  # Нажать «Publish your comments»
+  # Нажать панеле справа «Publish your comments»
   # Нажать «Submit»
