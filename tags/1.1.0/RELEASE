@@ -1,0 +1,52 @@
+1.1.0:
+  NEW:
+    * com.vk.api.lib.Ques (сокращение от Questions)
+    * com.vk.api.lib.Photos 
+
+1.0.2:
+  * fix: lirics -> lyrics
+
+1.0.1:
+  * изменения в документации: добавлена документация для MD5 и JSON
+
+1.0.0:
+  * apivk.swf, apivk.swc теперь включает в себя все зависимости.
+    apivk_standalone.swc больше не нужен.
+  * Отказ от as3crypto в пользу более простого класса MD5
+  * Класс com.serialization.json.JSON добавлен в проект.
+  * APIVK.req() -> APIVK.req(method); удален параметр APIVK.method
+  * параметр APIVK.format теперь задаётся в APIVK.init
+  * VKQueue переехал из examples в com.vk.api.VKQueue;
+  * VKQueue: изменена стратегия очереди и отправки запросов
+  * VKQueue: теперь реализует парсинг и для JSON
+  NEW:
+    * com.vk.api.API для динамической загрузки библиотеки
+    * com.vk.api.lib.Audio
+    * examples/dynamic - демонстрация com.vk.api.API
+
+0.1.1:
+  FIX:
+    * Variables.as: исправлено добавление параметра user_id
+
+0.1.0:
+  NEW:
+    * examples/:
+      * queue - создает очередь запросов для предотвращения
+        ошибки 6 "Too many requests per second"
+    * src/com/api/vk/lib:
+      * Geo.as
+      * Messages.as
+      * User.as
+      * UserField.as
+      * UserSett.as
+      * UserNameCase.as
+  FIX:
+    * APIVK.as: slice(0) -> splice(0)
+  Other:
+    * изменения в билд-файлах (build.xml)
+
+0.0.1:
+  * APIVK.as
+  * lib/HighScores.as
+  * lib/Misc.as
+  * lib/Variables.as

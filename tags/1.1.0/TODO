@@ -1,0 +1,55 @@
+# -*- coding: utf-8; mode: org; -*-
+* Структура src директории
+** com/vk/api/APIVK.as
+*** DONE addParArray
+** com/vk/api/lib/*.as [81%]
+*** DONE [#A] Variables.as
+    public static var user_id: String;
+    public static var session: String;
+**** getVariable
+**** getVariables
+**** putVariable
+*** DONE [#A] HighScores.as
+**** getHighScores.as
+**** setUserScore.as
+*** DONE Geo.as
+**** getCities
+**** getCountries
+*** DONE Messages.as
+**** getMessages
+**** sendMessage
+*** DONE Misc.as
+**** getServerTime.as
+
+*** DONE User.as
+**** getAds.as
+**** isAppUser
+**** getProfiles
+**** getFriends
+**** getAppFriends
+**** getUserBalance
+**** getUserSettings
+**** getGroups
+**** getGroupsFull
+*** DONE [#C] Audio.as
+*** TODO [#C] Offers.as
+*** TODO [#C] Pages.as
+*** DONE [#C] Photos.as
+*** DONE [#C] Questions.as
+* Примеры
+** unixtime
+*** TODO добавить комментарий как скомпилировать (static, dynamic linking), какие зависимости есть
+** DONE queue
+   * создается очередь для отправки запросов через интервал
+   * addReq(req, onSuccess, onError)
+* README
+** TODO Пояснение про sandbox при локальном запуске
+   * Error #2044: Unhandled securityError:. text=Error #2048: Security
+     sandbox violation:
+     file:///home/ivann/svn/apivk/trunk/examples/static/bin/ExampleStatic.swf
+     cannot load data from http://api.vkontakte.ru/api.php.
+   * http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04a.html#119065
+** TODO build.properties.copy_and_edit
+* документация
+** добавить примеры
+** TODO улучшить таблицу variables

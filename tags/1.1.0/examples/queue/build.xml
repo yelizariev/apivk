@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="apivk example with queue" basedir="." default="swf">
+	<property file="../../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+	<target name="apivk">
+		<ant
+			 antfile="../../build.xml"
+			 target="swc"
+			 inheritAll="false"
+			 />
+	</target>
+	<target
+		 name="swf"
+		 depends="apivk"
+		 >
+		<mxmlc
+			 file="src/Queue.as"
+			 output="bin/Queue.swf"
+			 >
+			<load-config filename="${flex.config}" />
+			<source-path path-element="src"/>
+			<library-path
+				 dir="../../lib"
+				 includes="apivk.swc"
+				 />
+		</mxmlc>
+	</target>
+</project>
