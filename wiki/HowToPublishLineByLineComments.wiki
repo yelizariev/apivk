@@ -2,5 +2,5 @@
   # Залогиниться, используя google-аккаунт
   # Найти нужный файл ([http://code.google.com/p/apivk/source/browse/trunk Source->Browse])
   # Двойной клик по нужной строчке кода
-  # Нажать панеле справа «Publish your comments»
+  # Нажать в панеле справа «Publish your comments»
   # Нажать «Submit»
