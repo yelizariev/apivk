@@ -1,3 +1,8 @@
+1.1.0:
+  NEW:
+    * com.vk.api.lib.Ques (сокращение от Questions)
+    * com.vk.api.lib.Photos 
+
 1.0.2:
   * fix: lirics -> lyrics
 

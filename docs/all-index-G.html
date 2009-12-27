@@ -63,6 +63,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("G�
    Возвращает список аудиозаписей пользователя или группы.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#get()">get</a>(uid, aid, pids) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список фотографий в альбоме.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#get()">get</a>(uids, qid, sort, need_profiles, count, offset) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список вопросов, созданных пользователем.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/class-list.html');" href="com/vk/api/APIVK.html#GET">GET</a> &mdash; Constant static property in class com.vk.api.<a onclick="javascript:loadClassListFrame('com/vk/api/class-list.html');" href="com/vk/api/APIVK.html">APIVK</a></td>
 </tr>
 <tr>
@@ -77,11 +91,39 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("G�
    текущего пользователя.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#getAlbums()">getAlbums</a>(uid, aids) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список альбомов пользователя.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#getAnswers()">getAnswers</a>(qid, sort, need_profiles, count, offset) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список ответов на вопрос.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#getAnswerVotes()">getAnswerVotes</a>(uid, aid, sort, need_profiles, count, offset) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список пользователей, присоединившихся к ответу.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Audio.html#getById()">getById</a>(audios) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Audio.html">Audio</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Возвращает информацию об аудиозаписях.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#getById()">getById</a>(photos) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает информацию о фотографиях по их идентификаторам.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Geo.html#getCities()">getCities</a>(cids) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Geo.html">Geo</a></td>
@@ -144,11 +186,26 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("G�
    получить список сообщений чата.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#getOutbound()">getOutbound</a>(sort, need_profiles, name_case, count, offset) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список вопросов, на которые ответил пользователь.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/User.html#getProfiles()">getProfiles</a>(uids, fields, name_case) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/User.html">User</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Возвращает расширенную информацию о пользователях.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#getProfileUploadServer()">getProfileUploadServer</a>() &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает адрес сервера для загрузки фотографии на страницу
+   пользователя.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Misc.html#getServerTime()">getServerTime</a>() &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Misc.html">Misc</a></td>
@@ -158,11 +215,25 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("G�
    unixtime сервера.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#getTypes()">getTypes</a>() &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает список всех возможных типов вопросов.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Audio.html#getUploadServer()">getUploadServer</a>() &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Audio.html">Audio</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Возвращает адрес сервера для загрузки аудиозаписей.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#getUploadServer()">getUploadServer</a>(aid, save_big) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает адрес сервера для загрузки фотографий.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/User.html#getUserBalance()">getUserBalance</a>() &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/User.html">User</a></td>
@@ -201,8 +272,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("G�
 </tr>
 </table>
 <p></p>
-<center class="copyright">v. 1.0.2</center>
+<center class="copyright">v. 1.1.0</center>
 </div>
 </body>
 </html>
-<!--v. 1.0.2-->
+<!--v. 1.1.0-->
