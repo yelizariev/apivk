@@ -1,3 +1,12 @@
+1.2.0:
+  Update API:
+    * Misc.getAds(...)
+  NEW:
+    * com.vk.api.lib.Offers
+    * com.vk.api.lib.Pages
+    * com.vk.api.lib.Wall
+    * com.vk.api.lib.SMS
+
 1.1.0:
   NEW:
     * com.vk.api.lib.Ques (сокращение от Questions)
