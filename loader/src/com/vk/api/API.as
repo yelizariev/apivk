@@ -68,6 +68,7 @@ package com.vk.api
 		public static var Audio        : *;
 		public static var Geo          : *;
 		public static var HighScores   : *;
+		public static var Language     : *;
 		public static var Messages     : *;
 		public static var Misc         : *;
 		public static var Offers       : *;
@@ -104,6 +105,7 @@ package com.vk.api
 				Audio        = getDef('com.vk.api.lib.Audio');
 				Geo          = getDef('com.vk.api.lib.Geo');
 				HighScores   = getDef('com.vk.api.lib.HighScores');
+				Language     = getDef('com.vk.api.lib.Language');
 				Messages     = getDef('com.vk.api.lib.Messages');
 				Misc         = getDef('com.vk.api.lib.Misc');
 				Offers       = getDef('com.vk.api.lib.Offers');
