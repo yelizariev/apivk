@@ -65,16 +65,22 @@ package com.vk.api
 		public static var APIVK        : *;
 		public static var VKQueue      : *;
 
-		public static var Messages     : *;
 		public static var Audio        : *;
 		public static var Geo          : *;
 		public static var HighScores   : *;
+		public static var Messages     : *;
 		public static var Misc         : *;
+		public static var Offers       : *;
+		public static var Pages        : *;
+		public static var Photos       : *;
+		public static var Ques         : *;
+		public static var SMS          : *;
 		public static var User         : *;
 		public static var UserField    : *;
 		public static var UserNameCase : *;
 		public static var UserSett     : *;
 		public static var Variables    : *;
+		public static var Wall         : *;
 
 		/**
 		 * Загрузить библиотеку.
@@ -100,11 +106,17 @@ package com.vk.api
 				HighScores   = getDef('com.vk.api.lib.HighScores');
 				Messages     = getDef('com.vk.api.lib.Messages');
 				Misc         = getDef('com.vk.api.lib.Misc');
+				Offers       = getDef('com.vk.api.lib.Offers');
+				Pages        = getDef('com.vk.api.lib.Pages');
+				Photos       = getDef('com.vk.api.lib.Photos');
+				Ques         = getDef('com.vk.api.lib.Ques');
+				SMS          = getDef('com.vk.api.lib.SMS');
 				User         = getDef('com.vk.api.lib.User');
 				UserField    = getDef('com.vk.api.lib.UserField');
 				UserNameCase = getDef('com.vk.api.lib.UserNameCase');
 				UserSett     = getDef('com.vk.api.lib.UserSett');
 				Variables    = getDef('com.vk.api.lib.Variables');
+				Wall         = getDef('com.vk.api.lib.Wall');
 
 				onLoad();
 				e.target.removeEventListener(Event.COMPLETE, onComplete);
