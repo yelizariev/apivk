@@ -42,11 +42,33 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("S�
    Сохраняет аудиозаписи после успешной загрузки.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Pages.html#save()">save</a>(pid, title, gid, mid, text) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Pages.html">Pages</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Сохраняет текст вики-страницы.</td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#save()">save</a>(aid, server, photos_list, hash) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
 </tr>
 <tr>
 <td width="20"></td><td>
    Сохраняет фотографии после успешной загрузки.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Pages.html#saveAccess()">saveAccess</a>(pid, gid, view, edit) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Pages.html">Pages</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Сохраняет новые настройки доступа на чтение и редактирование
+   вики-страницы.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Wall.html#savePost()">savePost</a>(wall_id, post_id, server, photo, hash, photo_id_user, photo_id_photo, message) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Wall.html">Wall</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Сохраняет запись на стене пользователя.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html#saveProfilePhoto()">saveProfilePhoto</a>(server, photo, hash) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Photos.html">Photos</a></td>
@@ -62,6 +84,14 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("S�
 <td width="20"></td><td>
    Возвращает список аудиозаписей в соответствии с заданным
    критерием поиска.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Offers.html#search()">search</a>(count, text, age_from, age_to, city, country, sex, online, photo, status, politic, university, edu_form, edu_status, school, district, station, group, company, position, religion, interests, name) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Offers.html">Offers</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Возвращает предложение случайного пользователя в соответствии
+   с выбранными фильтрами.</td>
 </tr>
 <tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html#search()">search</a>(text, sort, type, need_profiles, name_case, count, offset) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Ques.html">Ques</a></td>
@@ -99,6 +129,22 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("S�
    Устанавливает название приложения, которое выводится в левом меню.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Offers.html#setResponseViewed()">setResponseViewed</a>(uids) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/Offers.html">Offers</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Помечает выбранные ответы на предложение текущего
+   пользователя как просмотренные.</td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/SMS.html#setSMSPrefix()">setSMSPrefix</a>(prefix) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/SMS.html">SMS</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+   Устанавливает префикс для обеспечения уникальности приложения-получателя SMS при отправке SMS пользователем приложению на номер ВКонтакте: 
+      </td>
+</tr>
+<tr>
 <td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/HighScores.html#setUserScore()">setUserScore</a>(score) &mdash; Static method in class com.vk.api.lib.<a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/HighScores.html">HighScores</a></td>
 </tr>
 <tr>
@@ -113,6 +159,20 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("S�
    Пол пользователя.</td>
 </tr>
 <tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/SMS.html">SMS</a> &mdash; Class in package <a onclick="javascript:loadClassListFrame('com/vk/api/lib/class-list.html');" href="com/vk/api/lib/package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td width="20"></td><td>
+  Методы, связанные с отправкой и приемом SMS
+  </td>
+</tr>
+<tr>
+<td colspan="2" class="idxrow"><a onclick="javascript:loadClassListFrame('com/vk/api/class-list.html');" href="com/vk/api/API.html#SMS">SMS</a> &mdash; Static property in class com.vk.api.<a onclick="javascript:loadClassListFrame('com/vk/api/class-list.html');" href="com/vk/api/API.html">API</a></td>
+</tr>
+<tr>
+<td width="20"></td><td></td>
+</tr>
+<tr>
 <td style="padding-bottom:20px" colspan="2"></td>
 </tr>
 <tr>
@@ -120,8 +180,8 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("S�
 </tr>
 </table>
 <p></p>
-<center class="copyright">v. 1.1.0</center>
+<center class="copyright">v. 1.2.0</center>
 </div>
 </body>
 </html>
-<!--v. 1.1.0-->
+<!--v. 1.2.0-->
