@@ -34,15 +34,36 @@ package com.vk.api.lib
 		 * текущего пользователя.
 		 *
 		 * @param count количество возвращаемых рекламных объявлений
-		 * (максимум 10).
+		 * (максимум 20).
+		 *
+		 * @param type тип рекламных объявлений. 1 – только
+		 * таргетированные объявления, 2 – только прямые объявления
+		 * приложений, 3 – все объявления. По умолчанию равен 3.
+		 *
+		 * @param apps_ids список id приложений для выборки из прямых
+		 * объявлений. Этот параметр игнорируется в том случае, если
+		 * параметр type равен 1.
+		 *
+		 * @param min_price минимальная стоимость перехода по рекламной
+		 * ссылке в сотых долях голоса. Применяется только при выборке
+		 * из прямых объявлений. По умолчанию равен 0.
 		 *
 		 * @see http://vkontakte.ru/pages.php?o=-1&p=getAds
 		 */
 		public static function getAds(
-		                        count: String = '10'
-		                        ): URLRequest
+		                              count: String = '1',
+		                              type: String = null,
+		                              apps_ids: Array = null,
+		                              min_price: String = null
+		                              ): URLRequest
 		{
 			APIVK.addPar('count', count);
+			if (type)
+				APIVK.addPar('type', type);
+			if (apps_ids)
+				APIVK.addParArray('apps_ids', apps_ids);
+			if (min_price)
+				APIVK.addPar('min_price', min_price);
 			return APIVK.req('getAds');
 		}
 

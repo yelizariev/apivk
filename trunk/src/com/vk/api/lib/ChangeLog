@@ -1,3 +1,15 @@
+2009-12-28  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Wall.as: init version
+
+	* SMS.as: init version
+
+	* Pages.as: init version
+
+	* Offers.as: init version
+
+	* Misc.as: update getAds
+
 2009-12-27  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Ques.as: init version
