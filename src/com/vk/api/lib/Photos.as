@@ -1,6 +1,6 @@
 // -*- coding: utf-8 -*-
 
-// Copyright (c) 2009 The apivk.googlecode.com project Authors.
+// Copyright (c) 2009-2010 The apivk.googlecode.com project Authors.
 // All rights reserved. Use of this source code is governed
 // by a BSD-style license that can be found in the LICENSE file.
 
