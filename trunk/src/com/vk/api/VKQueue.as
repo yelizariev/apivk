@@ -128,7 +128,7 @@ package com.vk.api
 				isError = (pattern.exec(raw) != null);
 			}
 			if (isError){//if error 6
-				trace('VKQueue: Error 6 "Too many requests per second" ');
+				//trace('VKQueue: Error 6 "Too many requests per second" ');
 				if (r.isRepeat)
 					_queue.unshift(r);
 				else
