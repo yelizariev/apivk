@@ -220,7 +220,7 @@
 			 projectname="apivk"
 			 filename="${basedir}/trunk/loader/lib/apivk-loader.swc"
 			 targetfilename="apivk-loader-${version.string}+.swc"
-			 summary="class for dynamic load apivk.swf (>= ${version.string})"
+			 summary="class com.vk.api.API for dynamic load apivk.swf (>= ${version.string})"
 			 labels="Featured" />
 		<delete file="apivk.tar.gz"/>
 	</target>
