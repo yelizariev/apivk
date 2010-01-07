@@ -120,8 +120,8 @@ package com.vk.api
 		/**
 		 * Cоздать объект XMLRequest.
 		 * <p>Использует данные полученные через <code>APIVK.method</code>,
-		 * <code>addPar</code>, <code>addParSafe</code>. После использования
-		 * эти данные удаляются.
+		 * <code>addPar</code>, <code>addParArray</code>. После использования
+		 * эти данные удаляются.</p>
 		 *
 		 * @return HTTP запрос, в соответствии с предыдущими обращениями к классу.
 		 *
