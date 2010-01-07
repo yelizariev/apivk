@@ -231,7 +231,7 @@
 			 username="${googlecode.username}"
 			 password="${googlecode.password}"
 			 projectname="apivk"
-			 filename="${basedir}/trunk/loader/lib/apivk-nolib.swc"
+			 filename="${basedir}/trunk/lib/apivk-nolib.swc"
 			 targetfilename="apivk-nolib-${version.string}.swc"
 			 summary="apivk.swc exclude package com.vk.api.lib"
 			 labels="Featured" />
