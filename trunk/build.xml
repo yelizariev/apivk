@@ -21,6 +21,25 @@
 			<arg line="-footer       ${doc.footer}"      />
 		</exec>
 	</target>
+	<target name="swc-nolib">
+		<compc
+			 output="lib/apivk-nolib.swc"
+			 incremental="true"
+			 >
+			<library-path
+				 dir="deps/lib"
+				 includes="JSONLite.swc"
+				 />
+			<include-sources
+				 dir="src/com/vk/api/"
+				 includes="APIVK.as VKQueue.as"
+				 />
+			<include-sources
+				 dir="deps/src"
+				 includes="utils/MD5.as"
+				 />
+		</compc>
+	</target>
 	<target name="swc">
 		<compc
 			 output="lib/apivk.swc"

@@ -86,26 +86,5 @@ package com.vk.api.lib
 			APIVK.addPar('name', name);
 			return APIVK.req('setNameInMenu');
 		}
-
-		/**
-		 * Универсальный метод, который позволяет запускать
-		 * последовательность других методов, сохраняя и фильтруя
-		 * промежуточные результаты.
-		 *
-		 * @param code код алгоритма в VKScript - формате, похожем на
-		 * JavaSсript или ActionScript (предполагается совместимость с
-		 * ECMAScript). Алгоритм должен завершаться командой return
-		 * %выражение%. Операторы должны быть разделены точкой с
-		 * запятой.
-		 *
-		 * @see http://vkontakte.ru/pages.php?o=-1&p=execute
-		 */
-		public static function execute(
-		                               code: String
-		                               ): URLRequest
-		{
-			APIVK.addPar('code', code);
-			return APIVK.req('execute');
-		}
 	}
 }
