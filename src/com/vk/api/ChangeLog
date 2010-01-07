@@ -1,3 +1,7 @@
+2010-01-07  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* APIVK.as: Misc.execute(...)->APIVK.execute(...)
+
 2010-01-03  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* VKQueue.as (onReceive): убран trace
