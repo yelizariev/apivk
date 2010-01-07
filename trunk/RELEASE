@@ -1,3 +1,10 @@
+2.0.0:
+  * [MAJOR] Misc.execute(code: String) -> APIVK.execute(code: String)
+  NEW:
+    * examples/execute: Демонстрация метода APIVK.execute
+    * lib/apivk-nolib.swc: сборка, не включающая в себя пакет
+      com.vk.api.lib
+
 1.4.0:
   NEW:
     * Misc.execute(...)
