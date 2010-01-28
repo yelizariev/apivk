@@ -75,7 +75,7 @@ package com.vk.api.lib
 			APIVK.addPar('aid', aid);
 			if (pids)
 				APIVK.addParArray('pids', pids);
-			return APIVK.req('photos.');
+			return APIVK.req('photos.get');
 		}
 
 		/**
