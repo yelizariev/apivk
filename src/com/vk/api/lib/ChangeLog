@@ -1,3 +1,7 @@
+2010-01-28  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Photos.as (get): fix api method name (thanks to Narkir)
+
 2010-01-07  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Misc.as: Misc.execute(...)->APIVK.execute(...)

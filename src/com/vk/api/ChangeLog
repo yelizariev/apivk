@@ -1,3 +1,7 @@
+2010-01-28  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* APIVK.as: fix Security issue
+
 2010-01-07  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* APIVK.as: Misc.execute(...)->APIVK.execute(...)
