@@ -1,3 +1,8 @@
+2.0.2:
+  FIX:
+    * security issue for loader
+    * correct method name in Photos.get(...). Thanks to Narkir
+
 2.0.1:
   FIX:
     * update docs in release
