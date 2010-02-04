@@ -89,7 +89,7 @@ package com.vk.api.lib
 				APIVK.addPar('photo_id', photo_id_user+'_'+photo_id_photo);
 			if (message)
 				APIVK.addPar('message', message);
-			return APIVK.req('');
+			return APIVK.req('wall.savePost');
 		}
 	}
 }

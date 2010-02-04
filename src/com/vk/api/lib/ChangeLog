@@ -1,3 +1,7 @@
+2010-02-04  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Wall.as (savePost): fix api method name (thanks to Makuper)
+
 2010-01-28  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Photos.as (get): fix api method name (thanks to Narkir)
