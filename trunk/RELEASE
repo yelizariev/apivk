@@ -1,3 +1,7 @@
+2.0.3:
+  FIX:
+    * fix api method name in Wall.savePost(...) .Thanks to Makuper.
+
 2.0.2:
   FIX:
     * security issue for loader
