@@ -1,3 +1,6 @@
+2.0.5:
+  * docs: improve variables table
+
 2.0.4:
   NEW:
     * lib: add const UserSett.WALL=512. Thanks to Makuper.
