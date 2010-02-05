@@ -1,5 +1,7 @@
 2010-02-05  Ivan Elizaryev  <ivann.exe@gmail.com>
 
+	* Variables.as: asdoc: improve variables table
+
 	* UserSett.as: add const WALL (thanks to Makuper)
 
 2010-02-04  Ivan Elizaryev  <ivann.exe@gmail.com>
