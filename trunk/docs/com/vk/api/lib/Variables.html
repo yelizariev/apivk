@@ -45,156 +45,134 @@ if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Cl
   <tr>
    <th>Номера</th><th>Постоянные</th>
    <th>api_id</th><th>user_id</th><th>session</th>
-   <th>Зарезерв.</th>
    <th>Описание</th>
   </tr>
   <tr>
-   <td>0</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>Да</td>
+   <td><code>0</code></td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>unixtime</td>
   </tr>
   <tr>
-   <td>1-14</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>Да</td>
-   <td>-</td>
+   <td><code>1-14</code></td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
+   <td>&#xA0;</td>
   </tr>
   <tr>
-   <td>16</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>Да</td>
+   <td><code>16</code></td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>highscores count</td>
   </tr>
   <tr>
-   <td>17</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>Да</td>
+   <td><code>17</code></td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>max_scores</td>
   </tr>
   <tr>
-   <td>18-31</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>-</td>
+   <td>18-31</td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>application variables</td>
   </tr>
   <tr>
-   <td>30-(32+max_scores-1)</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>Да</td>
+   <td><code>30-(32+max_scores-1)</code></td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>highscore records</td>
   </tr>
   <tr>
-   <td>(32+max_scores-1)-1023</td><td>Да</td>
-   <td>Да</td><td>-</td><td>-</td>
-   <td>-</td>
+   <td>(32+max_scores-1)-1023</td><td>✔</td>
+   <td>✔</td><td>&#xA0;</td><td>&#xA0;</td>
    <td>application variables</td>
   </tr>
       <tr>
-   <td>1024-1039</td><td>Да</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>Да</td>
-   <td>-</td>
+   <td><code>1024-1039</code></td><td>✔</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
+   <td>&#xA0;</td>
   </tr>
   <tr>
-   <td>1040-1279</td><td>Да</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1040-1279</td><td>✔</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user private vars</td>
   </tr>
   <tr>
-   <td>1280-1295</td><td>Да</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>Да</td>
-   <td>-</td>
+   <td><code>1280-1295</code></td><td>✔</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
+   <td>&#xA0;</td>
   </tr>
   <tr>
-   <td>1296-1503</td><td>Да</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1296-1503</td><td>✔</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user public vars (other users: read only)</td>
   </tr>
   <tr>
-   <td>1503-1535</td><td>Да</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1503-1535</td><td>✔</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user public vars (other users: read-write)</td>
   </tr>
   <tr>
-   <td>1535-1567</td><td>-</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1535-1567</td><td>&#xA0;</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user public vars (other users: read-write)</td>
   </tr>
   <tr>
-   <td>1568-1791</td><td>-</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1568-1791</td><td>&#xA0;</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user public vars (other users: read only)</td>
   </tr>
   <tr>
-   <td>1792-2047</td><td>-</td>
-   <td>Да</td><td>Да</td><td>-</td>
-   <td>-</td>
+   <td>1792-2047</td><td>&#xA0;</td>
+   <td>✔</td><td>✔</td><td>&#xA0;</td>
    <td>user private vars</td>
   </tr>
       <tr>
-   <td>2048</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>Да</td>
+   <td><code>2048</code></td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>current session's id (read only)</td>
   </tr>
   <tr>
-   <td>2049</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>Да</td>
+   <td><code>2049</code></td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>current session's name</td>
   </tr>
   <tr>
-   <td>2050-2063</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>Да</td>
-   <td>-</td>
+   <td><code>2050-2063</code></td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
+   <td>&#xA0;</td>
   </tr>
   <tr>
-   <td>2064</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>Да</td>
+   <td><code>2064</code></td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>messages count</td>
   </tr>
   <tr>
-   <td>2065-2079</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>-</td>
+   <td>2065-2079</td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>session vars</td>
   </tr>
   <tr>
-   <td>2080-2207</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>Да</td>
+   <td><code>2080-2207</code></td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>message query</td>
   </tr>
   <tr>
-   <td>2208-3071</td><td>-</td>
-   <td>Да</td><td>-</td><td>Да</td>
-   <td>-</td>
+   <td>2208-3071</td><td>&#xA0;</td>
+   <td>✔</td><td>&#xA0;</td><td>✔</td>
    <td>session vars</td>
   </tr>
       <tr>
-   <td>3072</td><td>-</td>
-   <td>Да</td><td>Да</td><td>Да</td>
-   <td>Да</td>
+   <td><code>3072</code></td><td>&#xA0;</td>
+   <td>✔</td><td>✔</td><td>✔</td>
    <td>read messages count</td>
   </tr>
   <tr>
-   <td>3073-4095</td><td>-</td>
-   <td>Да</td><td>Да</td><td>Да</td>
-   <td>Да</td>
+   <td>3073-4095</td><td>&#xA0;</td>
+   <td>✔</td><td>✔</td><td>✔</td>
    <td>instance vars</td>
   </tr>
   </table>
   <p>В постоянных переменных может храниться до 255 байтов.
   Во временных переменнах &#x2014; до 4095 байтов</p>
+  
+  <p><code>Моноширинным шрифтом</code> обозначены
+  зарезервированные переменные<p>
   <p></p>
 <br>
 <hr>
@@ -396,8 +374,8 @@ showHideInherited();
 <hr>
 <br>
 <p></p>
-<center class="copyright">v. 2.0.4</center>
+<center class="copyright">v. 2.0.5</center>
 </div>
 </body>
 </html>
-<!--v. 2.0.4-->
+<!--v. 2.0.5-->
