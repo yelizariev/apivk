@@ -1,0 +1,803 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Photos,com.vk.api.lib.Photos,createAlbum,editAlbum,getAlbums,getById,getProfileUploadServer,getUploadServer,makeCover,move,reorderAlbums,reorderPhotos,save,saveProfilePhoto,get" name="keywords">
+<title>com.vk.api.lib.Photos</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Photos - Документация apivk';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">apivk.googlecode.com</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/vk/api/lib/Photos.html&amp;com/vk/api/lib/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Photos</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Photos"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Photos</td>
+</tr>
+</table>
+<p></p>
+  Работа с фотографиями
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createAlbum()">createAlbum</a>(title:String, privacy:String = "0", comment_privacy:String = "0", description:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Создает пустой альбом для фотографий.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#editAlbum()">editAlbum</a>(aid:String, title:String, privacy:String = null, comment_privacy:String = null, description:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Редактирует данные альбома для фотографий пользователя.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get()">get</a>(uid:String, aid:String, pids:Array = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список фотографий в альбоме.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAlbums()">getAlbums</a>(uid:String = null, aids:Array = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список альбомов пользователя.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getById()">getById</a>(photos:Array):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает информацию о фотографиях по их идентификаторам.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getProfileUploadServer()">getProfileUploadServer</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает адрес сервера для загрузки фотографии на страницу
+   пользователя.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUploadServer()">getUploadServer</a>(aid:String = null, save_big:Boolean = false):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает адрес сервера для загрузки фотографий.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#makeCover()">makeCover</a>(pid:String, aid:String, oid:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Делает фотографию обложкой альбома.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#move()">move</a>(pid:String, target_aid:String, oid:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Переносит фотографию из одного альбома в другой.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#reorderAlbums()">reorderAlbums</a>(aid:String, before:String, after:String, oid:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Меняет порядок альбома в списке альбомов пользователя.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#reorderPhotos()">reorderPhotos</a>(pid:String, before:String, after:String, oid:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Меняет порядок фотографии в списке фотографий альбома пользователя.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#save()">save</a>(aid:String, server:String, photos_list:String, hash:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Сохраняет фотографии после успешной загрузки.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#saveProfilePhoto()">saveProfilePhoto</a>(server:String, photo:String, hash:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Сохраняет фотографию пользователя после успешной загрузки.</div>
+</td><td class="summaryTableOwnerCol">Photos</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="createAlbum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createAlbum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createAlbum(title:String, privacy:String = "0", comment_privacy:String = "0", description:String = null):URLRequest</code><p>
+   Создает пустой альбом для фотографий.
+      </p><p> Возвращает объект альбома с полями aid, thumb_id,
+   owner_id, title, description, created, updated, size,
+   privacy. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:String</code> &mdash; название альбома.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">privacy</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; уровень доступа к альбому. Значения: 0 – все
+   пользователи, 1 – только друзья, 2 – друзья и друзья друзей.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">comment_privacy</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; уровень доступа к комментированию
+   альбома. Значения: 0 – все пользователи, 1 – только друзья, 2
+   – друзья и друзья друзей.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">description</span>:String</code> (default = <code>null</code>)<code></code> &mdash; текст описания альбома.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.createAlbum" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.createAlbum</a>
+</div>
+</div>
+<a name="editAlbum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">editAlbum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function editAlbum(aid:String, title:String, privacy:String = null, comment_privacy:String = null, description:String = null):URLRequest</code><p>
+   Редактирует данные альбома для фотографий пользователя.
+      </p><p>Возвращает 1 в случае успеха. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; идентификатор редактируемого альбома. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:String</code> &mdash; новое название альбома.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">privacy</span>:String</code> (default = <code>null</code>)<code></code> &mdash; новый уровень доступа к альбому. Значения: 0 – все пользователи, 1 – только друзья, 2 – друзья и друзья друзей. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">comment_privacy</span>:String</code> (default = <code>null</code>)<code></code> &mdash; новый уровень доступа к комментированию альбома. Значения: 0 – все пользователи, 1 – только друзья, 2 – друзья и друзья друзей. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">description</span>:String</code> (default = <code>null</code>)<code></code> &mdash; новый текст описания альбома. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.editAlbum" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.editAlbum</a>
+</div>
+</div>
+<a name="get()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function get(uid:String, aid:String, pids:Array = null):URLRequest</code><p>
+   Возвращает список фотографий в альбоме.
+      </p><p>Возвращает информацию о фотографиях альбома в виде массива
+   объектов, каждый из которых имеет поля pid, aid, owner_id,
+   src, src_small, src_big, created. Если фотография была
+   загружена с параметром save_big равным 1, то в информации о
+   ней будут возвращены поля src_xbig, src_xxbig, содержащие
+   адреса фотографий более высокого качества. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; ID пользователя, которому принадлежит альбом с
+   фотографиями.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; ID альбома с фотографиями. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; список ID фотографий. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.get" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.get</a>
+</div>
+</div>
+<a name="getAlbums()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAlbums</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getAlbums(uid:String = null, aids:Array = null):URLRequest</code><p>
+   Возвращает список альбомов пользователя. 
+      </p><p>Возвращает информацию об альбомах пользователях в виде
+   массива объектов, каждый из которых имеет поля aid, thumb_id,
+   owner_id, title, description, created, updated, size,
+   privacy.</p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; ID пользователя, которому принадлежат альбомы. По
+   умолчанию ID текущего пользователя.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; список ID альбомов. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.getAlbums" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.getAlbums</a>
+</div>
+</div>
+<a name="getById()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getById</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getById(photos:Array):URLRequest</code><p>
+   Возвращает информацию о фотографиях по их идентификаторам.
+      </p><p>Возвращает информацию о фотографиях в виде массива
+   объектов, каждый из которых имеет поля pid, aid, owner_id,
+   src, src_small, src_big, created. Если фотография была
+   загружена с параметром save_big равным 1, то для нее также
+   будут возвращены поля src_xbig и src_xxbig, содержащие адреса
+   фотографий более высокого качества. </p>
+      <p>Если у пользователя, под
+   которым пускается запрос, нет прав на просмотр фотографии,
+   информация о ней не придет в ответе. <p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">photos</span>:Array</code> &mdash; список идентификаторов вида <code>[UserOwnerID,
+   PhotoID]</code>
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.getById" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.getById</a>
+</div>
+</div>
+<a name="getProfileUploadServer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getProfileUploadServer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getProfileUploadServer():URLRequest</code><p>
+   Возвращает адрес сервера для загрузки фотографии на страницу
+   пользователя.
+      </p><p>Возвращает объект с единственным полем upload_url.</p>
+      <p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.getProfileUploadServer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.getProfileUploadServer</a>
+</div>
+</div>
+<a name="getUploadServer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUploadServer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getUploadServer(aid:String = null, save_big:Boolean = false):URLRequest</code><p>
+   Возвращает адрес сервера для загрузки фотографий.
+      </p><p>Возвращает объект с полями upload_url и aid.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; ID альбома, в который необходимо загрузить фотографии.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">save_big</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; если этот параметр равен <code>true</code>,
+   то помимо стандартных размеров, фотографии будут сохранены в
+   больших размерах – 807 и 1280 точек в ширину.</p>
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.getUploadServer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.getUploadServer</a>
+</div>
+</div>
+<a name="makeCover()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">makeCover</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function makeCover(pid:String, aid:String, oid:String = null):URLRequest</code><p>
+   Делает фотографию обложкой альбома.
+      </p><p>Возвращает 1 в случае успеха. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pid</span>:String</code> &mdash; id фотографии, которая должна стать обложкой альбома. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id альбома. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id владельца альбома, по умолчанию id текущего пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.makeCover" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.makeCover</a>
+</div>
+</div>
+<a name="move()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">move</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function move(pid:String, target_aid:String, oid:String = null):URLRequest</code><p>
+   Переносит фотографию из одного альбома в другой.
+      </p><p>Возвращает 1 в случае успеха. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pid</span>:String</code> &mdash; id переносимой фотографии. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target_aid</span>:String</code> &mdash; id альбома, куда переносится фотография. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id владельца переносимой фотографии, по умолчанию
+   id текущего пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.move" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.move</a>
+</div>
+</div>
+<a name="reorderAlbums()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">reorderAlbums</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function reorderAlbums(aid:String, before:String, after:String, oid:String = null):URLRequest</code><p>
+   Меняет порядок альбома в списке альбомов пользователя.
+      </p><p>Возвращает 1 в случае успеха. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id альбома, порядок которого нужно изменить. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">before</span>:String</code> &mdash; id альбома, перед которым следует поместить альбом. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">after</span>:String</code> &mdash; id альбома, после которого следует поместить альбом. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id владельца альбома, по умолчанию id текущего пользователя. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.reorderAlbums" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.reorderAlbums</a>
+</div>
+</div>
+<a name="reorderPhotos()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">reorderPhotos</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function reorderPhotos(pid:String, before:String, after:String, oid:String = null):URLRequest</code><p>
+   Меняет порядок фотографии в списке фотографий альбома пользователя.
+      </p><p>Возвращает 1 в случае успеха. </p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pid</span>:String</code> &mdash; id фотографии, порядок которой нужно изменить. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">before</span>:String</code> &mdash; id фотографии, перед которой следует поместить
+   фотографию.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">after</span>:String</code> &mdash; id фотографии, после которой следует поместить
+   фотографию.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id владельца фотографии, по умолчанию id текущего
+   пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.reorderPhotos" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.reorderPhotos</a>
+</div>
+</div>
+<a name="save()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">save</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function save(aid:String, server:String, photos_list:String, hash:String):URLRequest</code><p>
+   Сохраняет фотографии после успешной загрузки.
+      </p><p>Возвращает массив объектов с загруженными фотографиями,
+   каждый из которых имеет поля pid, aid, owner_id, src,
+   src_big, src_small, created. Если фотографии были загружены с
+   параметром save_big равным 1, то в возвращаемом массиве будут
+   определены поля src_xbig, src_xxbig, содержащие адреса
+   фотографий более высокого качества. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; ID альбома, в который необходимо загрузить фотографии.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">server</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   фотографий на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">photos_list</span>:String</code> &mdash; параметр, возвращаемый в результате
+   загрузки фотографий на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">hash</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   фотографий на сервер.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.save" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.save</a>
+</div>
+</div>
+<a name="saveProfilePhoto()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">saveProfilePhoto</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function saveProfilePhoto(server:String, photo:String, hash:String):URLRequest</code><p>
+   Сохраняет фотографию пользователя после успешной загрузки.
+      </p><p>Возвращает объект, содержащий поля photo_hash и
+   photo_src. Параметр photo_hash необходим для подтверждения
+   пользователем изменения его фотографии через вызов метода
+   saveProfilePhoto Flash-контейнера. Поле photo_src содержит
+   путь к загруженной фотографии. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">server</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   фотографий на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">photo</span>:String</code> &mdash; параметр, возвращаемый в результате
+   загрузки фотографий на сервер.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">hash</span>:String</code> &mdash; параметр, возвращаемый в результате загрузки
+   фотографий на сервер.
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=photos.saveProfilePhoto" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=photos.saveProfilePhoto</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">v. 2.0.5</center>
+</div>
+</body>
+</html>
+<!--v. 2.0.5-->

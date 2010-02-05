@@ -1,0 +1,96 @@
+2.0.5:
+  * docs: improve variables table
+
+2.0.4:
+  NEW:
+    * lib: add const UserSett.WALL=512. Thanks to Makuper.
+
+2.0.3:
+  FIX:
+    * fix api method name in Wall.savePost(...) .Thanks to Makuper.
+
+2.0.2:
+  FIX:
+    * security issue for loader
+    * correct method name in Photos.get(...). Thanks to Narkir
+
+2.0.1:
+  FIX:
+    * update docs in release
+
+2.0.0:
+  * [MAJOR] Misc.execute(code: String) -> APIVK.execute(code: String)
+  NEW:
+    * examples/execute: Демонстрация метода APIVK.execute
+    * lib/apivk-nolib.swc: сборка, не включающая в себя пакет
+      com.vk.api.lib
+
+1.4.0:
+  NEW:
+    * Misc.execute(...)
+
+1.3.0:
+  NEW:
+    * com.vk.api.lib.Language
+
+1.2.0:
+  Update API:
+    * Misc.getAds(...)
+  NEW:
+    * com.vk.api.lib.Offers
+    * com.vk.api.lib.Pages
+    * com.vk.api.lib.Wall
+    * com.vk.api.lib.SMS
+
+1.1.0:
+  NEW:
+    * com.vk.api.lib.Ques (сокращение от Questions)
+    * com.vk.api.lib.Photos 
+
+1.0.2:
+  * fix: lirics -> lyrics
+
+1.0.1:
+  * изменения в документации: добавлена документация для MD5 и JSON
+
+1.0.0:
+  * apivk.swf, apivk.swc теперь включает в себя все зависимости.
+    apivk_standalone.swc больше не нужен.
+  * Отказ от as3crypto в пользу более простого класса MD5
+  * Класс com.serialization.json.JSON добавлен в проект.
+  * APIVK.req() -> APIVK.req(method); удален параметр APIVK.method
+  * параметр APIVK.format теперь задаётся в APIVK.init
+  * VKQueue переехал из examples в com.vk.api.VKQueue;
+  * VKQueue: изменена стратегия очереди и отправки запросов
+  * VKQueue: теперь реализует парсинг и для JSON
+  NEW:
+    * com.vk.api.API для динамической загрузки библиотеки
+    * com.vk.api.lib.Audio
+    * examples/dynamic - демонстрация com.vk.api.API
+
+0.1.1:
+  FIX:
+    * Variables.as: исправлено добавление параметра user_id
+
+0.1.0:
+  NEW:
+    * examples/:
+      * queue - создает очередь запросов для предотвращения
+        ошибки 6 "Too many requests per second"
+    * src/com/api/vk/lib:
+      * Geo.as
+      * Messages.as
+      * User.as
+      * UserField.as
+      * UserSett.as
+      * UserNameCase.as
+  FIX:
+    * APIVK.as: slice(0) -> splice(0)
+  Other:
+    * изменения в билд-файлах (build.xml)
+
+0.0.1:
+  * APIVK.as
+  * lib/HighScores.as
+  * lib/Misc.as
+  * lib/Variables.as
