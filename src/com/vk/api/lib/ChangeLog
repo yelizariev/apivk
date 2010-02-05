@@ -1,3 +1,7 @@
+2010-02-05  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* UserSett.as: add const WALL (thanks to Makuper)
+
 2010-02-04  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* Wall.as (savePost): fix api method name (thanks to Makuper)
