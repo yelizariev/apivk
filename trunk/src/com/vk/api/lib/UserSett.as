@@ -61,5 +61,10 @@ package com.vk.api.lib
 		 * доступ к меню слева
 		 */
 		public static const LEFT_MENU: uint = 256;
+
+		/**
+		 * публикация на стенах пользователей
+		 */
+		public static const WALL: uint = 512;
 	}
 }
