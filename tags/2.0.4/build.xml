@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="apivk.googlecode.com" basedir="." default="swc">
+	<property file="build.properties" />
+	<property name="apivk.lib.desc" value="'Реализация конкретных методов АПИ'"/>
+	<property name="doc.title.main"   value="apivk.googlecode.com"/>
+	<property name="doc.title.window" value="'Документация apivk'"/>
+	<property name="doc.version"      value="SVN"/>
+	<property name="doc.footer"       value="'v. ${doc.version}'"/>
+
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+
+	<target name="doc">
+		<exec executable="${flex.bin.asdoc}" >
+			<arg line="-source-path src deps/src loader/src"  />
+			<arg line="-doc-sources src loader/src"  />
+			<arg line="-output      docs" />
+			<arg line="-templates-path ${flex.asdoc.templates}" />
+			<arg line="-package com.vk.api.lib ${apivk.lib.desc}"/>
+			<arg line="-main-title   ${doc.title.main}"  />
+			<arg line="-window-title ${doc.title.window}"/>
+			<arg line="-footer       ${doc.footer}"      />
+		</exec>
+	</target>
+	<target name="swc-nolib">
+		<compc
+			 output="lib/apivk-nolib.swc"
+			 incremental="true"
+			 >
+			<library-path
+				 dir="deps/lib"
+				 includes="JSONLite.swc"
+				 />
+			<include-sources
+				 dir="src/com/vk/api/"
+				 includes="APIVK.as VKQueue.as"
+				 />
+			<include-sources
+				 dir="deps/src"
+				 includes="utils/MD5.as"
+				 />
+		</compc>
+	</target>
+	<target name="swc">
+		<compc
+			 output="lib/apivk.swc"
+			 incremental="true"
+			 >
+			<library-path
+				 dir="deps/lib"
+				 includes="JSONLite.swc"
+				 />
+			<include-sources
+				 dir="src"
+				 includes="**/*.as"
+				 />
+			<include-sources
+				 dir="deps/src"
+				 includes="utils/MD5.as"
+				 />
+		</compc>
+	</target>
+
+	<target name="swf" depends="swc">
+		<unzip
+			 src="lib/apivk.swc"
+			 dest="lib"
+			 >
+			<patternset>
+				<include name="library.swf"/>
+			</patternset>
+			<mapper type="merge" to="apivk.nooptimize.swf"/>
+		</unzip>
+		<exec executable="${flex.bin.optimizer}" >
+			<arg line="-input lib/apivk.nooptimize.swf"/>
+			<arg line="-output lib/apivk.swf"/>
+		</exec>
+		<delete file="lib/apivk.nooptimize.swf"/>
+	</target>
+</project>

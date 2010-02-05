@@ -1,0 +1,19 @@
+2009-12-21  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Queue.as (onReceive): improve trace
+
+2009-12-20  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Queue.as: com.googlecode.apivk.util.VKQueue -> com.api.vk.util.VKQueue
+	правки в соответствии с изменениями в VKQueue
+
+
+2009-12-16  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Queue.as: init version
+
+ Copyright (c) 2009-2010 The apivk.googlecode.com project Authors.
+ Copying and distribution of this file, with or without modification, are
+ permitted provided the copyright notice and this notice are preserved.
+
+
