@@ -60,20 +60,19 @@
 		</compc>
 	</target>
 
-	<target name="swf" depends="swc">
-		<unzip
-			 src="lib/apivk.swc"
-			 dest="lib"
+	<target name="swf">
+		<mxmlc
+			 file="misc/APIVKSWF.as"
+			 output="lib/apivk.swf"
 			 >
-			<patternset>
-				<include name="library.swf"/>
-			</patternset>
-			<mapper type="merge" to="apivk.nooptimize.swf"/>
-		</unzip>
-		<exec executable="${flex.bin.optimizer}" >
-			<arg line="-input lib/apivk.nooptimize.swf"/>
-			<arg line="-output lib/apivk.swf"/>
-		</exec>
-		<delete file="lib/apivk.nooptimize.swf"/>
+			<load-config filename="${flex.config}" />
+			<source-path path-element="src"/>
+			<source-path path-element="deps/src"/>
+			<library-path
+				 dir="deps/lib"
+				 includes="*.swc"
+				 />
+			<incremental>true</incremental>
+		</mxmlc>
 	</target>
 </project>
