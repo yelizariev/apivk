@@ -11,7 +11,7 @@ package
 	{
 		public function Dynamic()
 		{
-			API.load(onLoadAPIVK, 'http://cs4279.vkontakte.ru/u1857932/897bef59b2eb5f.zip');
+			API.load(onLoadAPIVK, 'http://cs4285.vkontakte.ru/u1857932/b0ac130fe10225.zip');
 		}
 		private function onLoadAPIVK(): void
 		{

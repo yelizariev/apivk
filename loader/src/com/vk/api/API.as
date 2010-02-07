@@ -125,7 +125,7 @@ package com.vk.api
 			}
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, onComplete);
 			loader.load(new URLRequest(url),
-			            new LoaderContext(true)
+			            new LoaderContext(true, new ApplicationDomain())
 			            );
 		}
 	}
