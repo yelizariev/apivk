@@ -1,3 +1,7 @@
+2010-02-07  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* API.as: now loading in separate ApplicationDomain
+
 2009-12-28  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* API.as: добавлены новые классы

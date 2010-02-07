@@ -11,8 +11,6 @@
 
 package com.vk.api
 {
-	import flash.system.Security;
-
 	import flash.net.URLRequest;
 	import flash.net.URLVariables;
 	import utils.MD5;
@@ -29,8 +27,6 @@ package com.vk.api
 	 */
 	public class APIVK
 	{
-		Security.allowDomain( "*" );
-
 		private static const API_VERSION: String = '2.0';
 
 		private static var _isJSON: Boolean;
