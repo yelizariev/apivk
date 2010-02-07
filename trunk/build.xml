@@ -59,17 +59,16 @@
 				 />
 		</compc>
 	</target>
-
 	<target name="swf">
 		<mxmlc
-			 file="misc/APIVKSWF.as"
-			 output="lib/apivk.swf"
+			 file="${basedir}/misc/APIVKSWF.as"
+			 output="${basedir}/lib/apivk.swf"
 			 >
 			<load-config filename="${flex.config}" />
-			<source-path path-element="src"/>
-			<source-path path-element="deps/src"/>
+			<source-path path-element="${basedir}/src"/>
+			<source-path path-element="${basedir}/deps/src"/>
 			<library-path
-				 dir="deps/lib"
+				 dir="${basedir}/deps/lib"
 				 includes="*.swc"
 				 />
 			<incremental>true</incremental>

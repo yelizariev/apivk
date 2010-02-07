@@ -73,6 +73,7 @@
 		<ant
 			 antfile="trunk/build.xml"
 			 inheritAll="false">
+			<target name="swc"/>
 			<target name="swf"/>
 		</ant>
 	</target>
@@ -193,7 +194,7 @@
 			 projectname="apivk"
 			 filename="${basedir}/trunk/lib/apivk.swf"
 			 targetfilename="apivk-${version.string}.swf"
-			 summary="extracted and optimized apivk-${version.string}.swc. Use for dynamic loading."
+			 summary="like apivk-${version.string}.swc. but for dynamic loading. Use it with apivk-loader.swc"
 			 labels="Featured" />
 	</target>
 	<target
