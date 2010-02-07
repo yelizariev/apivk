@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="simple apivk example" basedir="." default="swf">
+	<property file="../../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+	<target name="swf">
+		<mxmlc
+			 file="src/Execute.as"
+			 output="bin/Execute.swf"
+			 >
+			<load-config filename="${flex.config}" />
+			<library-path
+				 dir="../../lib"
+				 includes="apivk-nolib.swc"
+				 />
+		</mxmlc>
+	</target>
+</project>

@@ -1,0 +1,664 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Offers,com.vk.api.lib.Offers,accept,close,deleteResponses,edit,getInboundResponses,getOutboundResponses,open,refuse,search,setResponseViewed,get" name="keywords">
+<title>com.vk.api.lib.Offers</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Offers - Документация apivk';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">apivk.googlecode.com</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/vk/api/lib/Offers.html&amp;com/vk/api/lib/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Offers</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Offers"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Offers</td>
+</tr>
+</table>
+<p></p>
+  Работа с сервисом предложений
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#accept()">accept</a>(uid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Принимает ответ текущего пользователя на выбранное предложение.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Закрывает предложение текущего пользователя, убирая его из
+   общего доступа.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteResponses()">deleteResponses</a>(uids:Array):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Удаляет выбранные ответы на предложение текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#edit()">edit</a>(message:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Сохраняет информацию о предложении текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get()">get</a>(uids:Array = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает информацию о предложении, размещенном текущим
+   пользователем.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getInboundResponses()">getInboundResponses</a>(count:String = null, offset:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список ответов на предложение, размещенное текущим
+   пользователем.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOutboundResponses()">getOutboundResponses</a>(count:String = null, offset:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список ответов на предложения, принятые текущим пользователем.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#open()">open</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Открывает предложение текущего пользователя для общего доступа.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#refuse()">refuse</a>(uid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Отклоняет ответ текущего пользователя на выбранное предложение.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#search()">search</a>(count:String, text:String = null, age_from:String = null, age_to:String = null, city:String = null, country:String = null, sex:String = null, online:Boolean = false, photo:Boolean = false, status:String = null, politic:String = null, university:String = null, edu_form:String = null, edu_status:String = null, school:String = null, district:String = null, station:String = null, group:String = null, company:String = null, position:String = null, religion:String = null, interests:String = null, name:String = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает предложение случайного пользователя в соответствии
+   с выбранными фильтрами.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setResponseViewed()">setResponseViewed</a>(uids:Array):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Помечает выбранные ответы на предложение текущего
+   пользователя как просмотренные.</div>
+</td><td class="summaryTableOwnerCol">Offers</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="accept()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">accept</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function accept(uid:String):URLRequest</code><p>
+   Принимает ответ текущего пользователя на выбранное предложение. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; идентификатор владельца предложения, на которое
+   дается ответ.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.accept" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.accept</a>
+</div>
+</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function close():URLRequest</code><p>
+   Закрывает предложение текущего пользователя, убирая его из
+   общего доступа.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.close" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.close</a>
+</div>
+</div>
+<a name="deleteResponses()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteResponses</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function deleteResponses(uids:Array):URLRequest</code><p>
+   Удаляет выбранные ответы на предложение текущего пользователя. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uids</span>:Array</code> &mdash; идентификаторы пользователей, ответивших на
+   предложение пользователя
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.deleteResponses" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.deleteResponses</a>
+</div>
+</div>
+<a name="edit()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">edit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function edit(message:String):URLRequest</code><p>
+   Сохраняет информацию о предложении текущего пользователя.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">message</span>:String</code> &mdash; текст предложения, который будет доступен для других пользователей.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.edit" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.edit</a>
+</div>
+</div>
+<a name="get()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function get(uids:Array = null):URLRequest</code><p>
+   Возвращает информацию о предложении, размещенном текущим
+   пользователем.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; список ID пользователей, предложения которых
+   необходимо получить. По умолчанию используется ID текущего
+   пользователя.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.get" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.get</a>
+</div>
+</div>
+<a name="getInboundResponses()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getInboundResponses</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getInboundResponses(count:String = null, offset:String = null):URLRequest</code><p>
+   Возвращает список ответов на предложение, размещенное текущим
+   пользователем.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = <code>null</code>)<code></code> &mdash; количество ответов, которое необходимо получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = <code>null</code>)<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества ответов.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.getInboundResponses" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.getInboundResponses</a>
+</div>
+</div>
+<a name="getOutboundResponses()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOutboundResponses</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getOutboundResponses(count:String = null, offset:String = null):URLRequest</code><p>
+   Возвращает список ответов на предложения, принятые текущим пользователем. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = <code>null</code>)<code></code> &mdash; количество ответов, которое необходимо получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = <code>null</code>)<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества ответов.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.getOutboundResponses" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.getOutboundResponses</a>
+</div>
+</div>
+<a name="open()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">open</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function open():URLRequest</code><p>
+   Открывает предложение текущего пользователя для общего доступа.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.open" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.open</a>
+</div>
+</div>
+<a name="refuse()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">refuse</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function refuse(uid:String):URLRequest</code><p>
+   Отклоняет ответ текущего пользователя на выбранное предложение. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; идентификатор владельца предложения, ответ на
+   которое отклоняется.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.refuse" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.refuse</a>
+</div>
+</div>
+<a name="search()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">search</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function search(count:String, text:String = null, age_from:String = null, age_to:String = null, city:String = null, country:String = null, sex:String = null, online:Boolean = false, photo:Boolean = false, status:String = null, politic:String = null, university:String = null, edu_form:String = null, edu_status:String = null, school:String = null, district:String = null, station:String = null, group:String = null, company:String = null, position:String = null, religion:String = null, interests:String = null, name:String = null):URLRequest</code><p>
+   Возвращает предложение случайного пользователя в соответствии
+   с выбранными фильтрами.
+      </p><p>Возвращает объект offer, содержащий поля uid, name, photo,
+   date, message, age, online, city_id и city_name. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> &mdash; количество возвращаемых предложений.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> (default = <code>null</code>)<code></code> &mdash; ключевые слова в тексте предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">age_from</span>:String</code> (default = <code>null</code>)<code></code> &mdash; минимальный возраст владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">age_to</span>:String</code> (default = <code>null</code>)<code></code> &mdash; максимальный возраст владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">city</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id города владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">country</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id страны владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sex</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id пола владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">online</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; онлайн-статус владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">photo</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; наличие фотографии у владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id семейного положения владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">politic</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id политических взглядов владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">university</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id университета владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">edu_form</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id формы обучения в вузе владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">edu_status</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id статуса обучения в вузе владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">school</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id школы владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">district</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id района, указанного владельцем предложения в Местах.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">station</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id станции метро, указанной владельцем предложения в Местах.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">group</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id группы, в которой должен состоять владелец предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">company</span>:String</code> (default = <code>null</code>)<code></code> &mdash; строка - компания владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">position</span>:String</code> (default = <code>null</code>)<code></code> &mdash; строка - должность владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">religion</span>:String</code> (default = <code>null</code>)<code></code> &mdash; строка - религия владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">interests</span>:String</code> (default = <code>null</code>)<code></code> &mdash; ключевые слова в интересах владельца предложения.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> (default = <code>null</code>)<code></code> &mdash; ключевые слова в имени владельца предложения.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.search" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.search</a>
+</div>
+</div>
+<a name="setResponseViewed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setResponseViewed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function setResponseViewed(uids:Array):URLRequest</code><p>
+   Помечает выбранные ответы на предложение текущего
+   пользователя как просмотренные.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uids</span>:Array</code> &mdash; идентификаторы пользователей, ответивших на
+   предложение пользователя
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=offers.setResponseViewed" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=offers.setResponseViewed</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">v. 2.0.6</center>
+</div>
+</body>
+</html>
+<!--v. 2.0.6-->
