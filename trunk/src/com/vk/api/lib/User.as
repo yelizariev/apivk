@@ -81,6 +81,17 @@ package com.vk.api.lib
 		}
 
 		/**
+		 * Возвращает список идентификаторов друзей текущего
+		 * пользователя, которые установили данное приложение.
+		 *
+		 * @see http://vkontakte.ru/pages.php?o=-1&p=getAppFriends
+		 */
+		public static function getAppFriends(): URLRequest
+		{
+			return APIVK.req('getAppFriends');
+		}
+
+		/**
 		 * Возвращает баланс текущего пользователя на счету приложения в
 		 * сотых долях голоса.
 		 *

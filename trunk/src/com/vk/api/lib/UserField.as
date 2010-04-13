@@ -115,5 +115,18 @@ package com.vk.api.lib
 		 * Рейтинг пользователя
 		 */
 		public static const RATE: String = 'rate';
+
+		/**
+		 * На выходе будут доступны поля <code>home_phone</code>,
+		 * <code>mobile_phone</code>
+		 */
+		public static const CONTACTS: String = 'contacts';
+
+		/**
+		 * На выходе будут доступны поля <code>university</code>,
+		 * <code>university_name</code>, <code>faculty</code>,
+		 * <code>faculty_name</code>, <code>graduation</code
+		 */
+		public static const EDUCATION: String = 'education';
 	}
 }
