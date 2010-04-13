@@ -8,6 +8,8 @@
 
 
 ----
+При написании классов важно, чтобы были оформлены описания функций ([http://code.google.com/p/apivk/source/browse/trunk/src/com/vk/api/lib/User.as пример])
+
 ссылки:
   * [http://code.google.com/p/apivk/source/browse/trunk/templates/newClass.tmpl newClass.tmpl]
   * [http://code.google.com/p/apivk/source/browse/trunk/templates/newFunction.tmpl newFunction.tmpl ]
