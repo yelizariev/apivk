@@ -1,3 +1,8 @@
+2010-04-22  Ivan Elizaryev  <ivann.exe@gmail.com>
+
+	* Audio.as: fix method getById. Extend input params. Thanks to
+	Narkir.
+
 2010-04-13  Ivan Elizaryev  <ivann.exe@gmail.com>
 
 	* UserField.as: add CONTACTS, EDUCATION consts
