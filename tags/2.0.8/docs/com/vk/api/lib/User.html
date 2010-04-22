@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="User,com.vk.api.lib.User,getAppFriends,getFriends,getGroups,getGroupsFull,getProfiles,getUserBalance,getUserSettings,isAppUser" name="keywords">
+<title>com.vk.api.lib.User</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'User - Документация apivk';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">apivk.googlecode.com</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/vk/api/lib/User.html&amp;com/vk/api/lib/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;User</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class User"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class User</td>
+</tr>
+</table>
+<p></p>
+  информация о пользователе
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAppFriends()">getAppFriends</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список идентификаторов друзей текущего
+   пользователя, которые установили данное приложение.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getFriends()">getFriends</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список идентификаторов друзей текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getGroups()">getGroups</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список id групп текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getGroupsFull()">getGroupsFull</a>(gids:Array = null):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает базовую информацию о группах текущего пользователя
+   или о группах из списка gids.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getProfiles()">getProfiles</a>(uids:Array, fields:Array = null, name_case:String = ""):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает расширенную информацию о пользователях.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserBalance()">getUserBalance</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает баланс текущего пользователя на счету приложения в
+   сотых долях голоса.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getUserSettings()">getUserSettings</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Получает настройки текущего пользователя в данном приложении.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isAppUser()">isAppUser</a>(uid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   установил ли текущий пользователь приложение или нет.</div>
+</td><td class="summaryTableOwnerCol">User</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="getAppFriends()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAppFriends</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getAppFriends():URLRequest</code><p>
+   Возвращает список идентификаторов друзей текущего
+   пользователя, которые установили данное приложение.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getAppFriends" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getAppFriends</a>
+</div>
+</div>
+<a name="getFriends()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getFriends</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getFriends():URLRequest</code><p>
+   Возвращает список идентификаторов друзей текущего пользователя.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getFriends" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getFriends</a>
+</div>
+</div>
+<a name="getGroups()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getGroups</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getGroups():URLRequest</code><p>
+   Возвращает список id групп текущего пользователя. 
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getGroups" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getGroups</a>
+</div>
+</div>
+<a name="getGroupsFull()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getGroupsFull</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getGroupsFull(gids:Array = null):URLRequest</code><p>
+   Возвращает базовую информацию о группах текущего пользователя
+   или о группах из списка gids.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">gids</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; список id групп, информацию о которых нужно
+   получить. Если этот параметр указан, то информация о группах
+   текущего пользователя возвращена не будет.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getGroupsFull" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getGroupsFull</a>
+</div>
+</div>
+<a name="getProfiles()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getProfiles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getProfiles(uids:Array, fields:Array = null, name_case:String = ""):URLRequest</code><p>
+   Возвращает расширенную информацию о пользователях.
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uids</span>:Array</code> &mdash; список ID пользователей (максимум 1000 штук).
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">fields</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; поля анкет, необходимые для
+   получения. Доступные значения: uid, first_name, last_name,
+   nickname, sex, bdate (birthdate), city, country, timezone,
+   photo, photo_medium, photo_big, has_mobile, rate.
+   <p>Значения uid, first_name и last_name возвращаются всегда,
+   вне зависимости от выбранных полей и их количества. </p>
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name_case</span>:String</code> (default = "<code></code>")<code></code> &mdash; падеж для склонения имени и фамилии
+   пользователя. Возможные значения: именительный – nom,
+   родительный – gen, дательный – dat, винительный – acc,
+   творительный – ins, предложный – abl. По умолчанию nom.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getProfiles" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getProfiles</a>
+<br>
+<a href="UserField.html" target="">UserField</a>
+<br>
+<a href="UserNameCase.html" target="">UserNameCase</a>
+</div>
+</div>
+<a name="getUserBalance()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserBalance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getUserBalance():URLRequest</code><p>
+   Возвращает баланс текущего пользователя на счету приложения в
+   сотых долях голоса.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getUserBalance" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getUserBalance</a>
+</div>
+</div>
+<a name="getUserSettings()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getUserSettings</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getUserSettings():URLRequest</code><p>
+   Получает настройки текущего пользователя в данном приложении.
+      </p><p> Возвращает битовую маску настроек текущего пользователя в
+   данном приложени. Например, если метод возвращает 3, это
+   означает, что пользователь разрешил отправлять ему
+   уведомления и получать список его друзей.</p>
+      <ul>
+   <li>+1 – пользователь разрешил отправлять ему уведомления.</li>
+   <li>+2 – доступ к друзьям.</li>
+   <li>+4 – доступ к фотографиям.</li>
+   <li>+8 – доступ к аудиозаписям.</li>
+   <li>+32 – доступ к предложениям.</li>
+   <li>+64 – доступ к вопросам.</li>
+   <li>+128 – доступ к wiki-страницам.</li>
+   <li>+256 – доступ к меню слева.</li>
+   </ul>
+      <p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=getUserSettings" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=getUserSettings</a>
+<br>
+<a href="UserSett.html" target="">UserSett</a>
+</div>
+</div>
+<a name="isAppUser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isAppUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function isAppUser(uid:String):URLRequest</code><p>
+   установил ли текущий пользователь приложение или нет. 
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; ID пользователя. По умолчанию ID текущего пользователя. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=isAppUser" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=isAppUser</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">v. 2.0.8</center>
+</div>
+</body>
+</html>
+<!--v. 2.0.8-->

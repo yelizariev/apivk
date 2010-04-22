@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="apivk-loader" basedir="." default="swc">
+	<property file="../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${flex.ant.tasks}" />
+	<target name="swc">
+		<compc
+			 output="lib/apivk-loader.swc"
+			 incremental="true"
+			 >
+			<include-sources
+				 dir="src"
+				 includes="com/vk/api/API.as"
+				 />
+		</compc>
+	</target>
+</project>

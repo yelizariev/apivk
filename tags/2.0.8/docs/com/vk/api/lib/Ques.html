@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Ques,com.vk.api.lib.Ques,add,addAnswer,deleteAnswer,deleteQues,edit,getAnswerVotes,getAnswers,getOutbound,getTypes,joinAnswer,markAsViewed,search,get" name="keywords">
+<title>com.vk.api.lib.Ques</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Ques - Документация apivk';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">apivk.googlecode.com</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/vk/api/lib/Ques.html&amp;com/vk/api/lib/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Ques</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Ques"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.vk.api.lib</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Ques</td>
+</tr>
+</table>
+<p></p>
+  Работа с сервисом вопросов.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#add()">add</a>(text:String, type:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Создает новый вопрос у текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addAnswer()">addAnswer</a>(uid:String, qid:String, text:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Добавляет ответ на вопрос.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteAnswer()">deleteAnswer</a>(uid:String, aid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Удаляет ответ на вопрос.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteQues()">deleteQues</a>(qid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Удаляет вопрос текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#edit()">edit</a>(qid:String, text:String, type:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Редактирует вопрос текущего пользователя.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#get()">get</a>(uids:Array, qid:String = null, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список вопросов, созданных пользователем.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAnswers()">getAnswers</a>(qid:String, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список ответов на вопрос.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAnswerVotes()">getAnswerVotes</a>(uid:String, aid:String, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список пользователей, присоединившихся к ответу.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getOutbound()">getOutbound</a>(sort:String = "0", need_profiles:String = "0", name_case:String = null, count:String = "1", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список вопросов, на которые ответил пользователь.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getTypes()">getTypes</a>():URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список всех возможных типов вопросов.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#joinAnswer()">joinAnswer</a>(uid:String, aid:String):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   отмечает, что пользователь присоединяется к ответу на вопрос.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#markAsViewed()">markAsViewed</a>(aids:Array):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Отмечает список новых ответов на вопрос пользователя как прочитанный.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#search()">search</a>(text:String, sort:String = "0", type:String = null, need_profiles:String = "0", name_case:String = null, count:String = "1", offset:String = "0"):URLRequest</div>
+<div class="summaryTableDescription">[static]
+   Возвращает список вопросов, соответствующих критериям поиска.</div>
+</td><td class="summaryTableOwnerCol">Ques</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="add()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">add</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function add(text:String, type:String):URLRequest</code><p>
+   Создает новый вопрос у текущего пользователя.
+      </p><p> В случае успешного создания вопроса метод возвратит
+   идентификатор созданного вопроса (qid).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash; новый текст вопроса. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; новый тип вопроса. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.add" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.add</a>
+</div>
+</div>
+<a name="addAnswer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addAnswer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function addAnswer(uid:String, qid:String, text:String):URLRequest</code><p>
+   Добавляет ответ на вопрос.
+      </p><p>В случае успешного добавления ответа метод возвратит 1. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; id автора вопроса, ответ к которому добавляется. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">qid</span>:String</code> &mdash; id вопроса. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash; текст ответа. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.addAnswer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.addAnswer</a>
+</div>
+</div>
+<a name="deleteAnswer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteAnswer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function deleteAnswer(uid:String, aid:String):URLRequest</code><p>
+   Удаляет ответ на вопрос. Может быть запущен только автором
+   ответа или автором вопроса.
+      </p><p>В случае успешного удаления ответа метод возвратит 1.</p> 
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; id автора вопроса, ответ к которому удаляется. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id удаляемого ответа. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.deleteAnswer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.deleteAnswer</a>
+</div>
+</div>
+<a name="deleteQues()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteQues</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function deleteQues(qid:String):URLRequest</code><p>
+   Удаляет вопрос текущего пользователя.
+      </p><p>В случае успешного удаления вопроса метод возвратит 1. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">qid</span>:String</code> &mdash; id удаляемого вопроса.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.delete" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.delete</a>
+</div>
+</div>
+<a name="edit()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">edit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function edit(qid:String, text:String, type:String):URLRequest</code><p>
+   Редактирует вопрос текущего пользователя.
+      </p><p>В случае успешного сохранения вопроса метод возвратит 1.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">qid</span>:String</code> &mdash; id редактируемого вопроса. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash; новый текст вопроса. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; новый тип вопроса. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.edit" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.edit</a>
+</div>
+</div>
+<a name="get()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">get</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function get(uids:Array, qid:String = null, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</code><p>
+   Возвращает список вопросов, созданных пользователем.
+      </p><p>Возвращает массив объектов - вопросов текущего
+   пользователя, каждый из которых содержит поля qid, uid, type,
+   text, answers_num, last_poster_id, last_poster_name,
+   last_post_date, date, а также поля name, photo и online (если
+   значение need_profiles в запросе больше 0).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uids</span>:Array</code> &mdash; id пользователей, которым принадлежат вопросы,
+   через запятую.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">qid</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id отдельного вопроса, информацию о котором нужно
+   получить. Если указан qid, то uids не учитывается.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; сортировка результатов (0 - по дате обновления в
+   порядке убывания, 1 - по дате создания в порядке возрастания,
+   2 - по дате создания в порядке убывания).
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_profiles</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; определяет, требуется ли в ответе
+   краткая информация об авторе вопроса (поля name, photo и
+   online). Значения от 0 до 3. Чем больше значение, тем крупнее
+   фотография в поле photo.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>1</code>")<code></code> &mdash; падеж для склонения имени и фамилии
+   пользователя. Возможные значения: именительный – nom,
+   родительный – gen, дательный – dat, винительный – acc,
+   творительный – ins, предложный – abl. По умолчанию nom.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; количество вопросов, которое необходимо
+   получить.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="UserNameCase.html" target="">UserNameCase</a>
+<br>
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.get" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.get</a>
+</div>
+</div>
+<a name="getAnswers()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAnswers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getAnswers(qid:String, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</code><p>
+   Возвращает список ответов на вопрос.
+      </p><p>Возвращает количество найденных ответов и массив
+   соответствующих им объектов, каждый из которых содержит поля
+   aid, qid, uid, text, num, date, а также поля name, photo и
+   online (если значение need_profiles в запросе больше 0).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">qid</span>:String</code> &mdash; id вопроса.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; сортировка результатов (1 - в порядке убывания
+   даты, по умолчанию - в порядке возрастания)
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_profiles</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; определяет, требуется ли в ответе
+   краткая информация об авторе ответа (поля name, photo и
+   online). Значения от 0 до 3. Чем больше значение, тем крупнее
+   фотография в поле photo.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>1</code>")<code></code> &mdash; количество ответов, которое необходимо получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества ответов.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.getAnswers" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.getAnswers</a>
+</div>
+</div>
+<a name="getAnswerVotes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAnswerVotes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getAnswerVotes(uid:String, aid:String, sort:String = "0", need_profiles:String = "0", count:String = "1", offset:String = "0"):URLRequest</code><p>
+   Возвращает список пользователей, присоединившихся к ответу.
+      </p><p>Возвращает количество найденных ответов и массив
+   соответствующих им объектов, каждый из которых содержит поля
+   vid, voter_id, date, а также поля name, photo и online (если
+   значение need_profiles в запросе больше 0).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; id автора вопроса.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id ответа.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; сортировка результатов (1 - в порядке убывания
+   даты, по умолчанию - в порядке возрастания)
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_profiles</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; определяет, требуется ли в ответе
+   краткая информация о личности присоединившихся к ответу (поля
+   name, photo и online). Значения от 0 до 3. Чем больше
+   значение, тем крупнее фотография в поле photo.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>1</code>")<code></code> &mdash; количество пользователей, которое необходимо
+   получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества пользователей.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.getAnswerVotes" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.getAnswerVotes</a>
+</div>
+</div>
+<a name="getOutbound()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getOutbound</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getOutbound(sort:String = "0", need_profiles:String = "0", name_case:String = null, count:String = "1", offset:String = "0"):URLRequest</code><p>
+   Возвращает список вопросов, на которые ответил пользователь.
+      </p><p>Возвращает массив объектов – вопросов, на которые ответил
+   текущий пользователь, каждый из которых содержит поля qid,
+   uid, type, text, answers_num, last_poster_id,
+   last_poster_name, last_post_date, date, а также поля name,
+   photo и online (если значение need_profiles в запросе больше
+   0).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; сортировка результатов (0 - по дате обновления в
+   порядке убывания, 1 - по дате создания в порядке возрастания,
+   2 - по дате создания в порядке убывания).
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_profiles</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; определяет, требуется ли в ответе
+   краткая информация об авторе вопроса (поля name, photo и
+   online). Значения от 0 до 3. Чем больше значение, тем крупнее
+   фотография в поле photo.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name_case</span>:String</code> (default = <code>null</code>)<code></code> &mdash; падеж для склонения имени и фамилии
+   пользователя. Возможные значения: именительный – nom,
+   родительный – gen, дательный – dat, винительный – acc,
+   творительный – ins, предложный – abl. По умолчанию nom.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>1</code>")<code></code> &mdash; количество вопросов, которое необходимо
+   получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества вопросов.
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="UserNameCase.html" target="">UserNameCase</a>
+<br>
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.getOutbound" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.getOutbound</a>
+</div>
+</div>
+<a name="getTypes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getTypes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getTypes():URLRequest</code><p>
+   Возвращает список всех возможных типов вопросов.
+      </p><p>Возвращает массив всех возможных типов вопросов, каждый из
+   объектов которого содержит поля tid и name.</p>
+      <p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.getTypes" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.getTypes</a>
+</div>
+</div>
+<a name="joinAnswer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">joinAnswer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function joinAnswer(uid:String, aid:String):URLRequest</code><p>
+   отмечает, что пользователь присоединяется к ответу на вопрос.
+      </p><p>Возвращает новое количество пользователей,
+   присоединившихся к ответу. </p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">uid</span>:String</code> &mdash; id автора вопроса, ответ к которому одобряется.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">aid</span>:String</code> &mdash; id одобряемого ответа. 
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.joinAnswer" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.joinAnswer</a>
+</div>
+</div>
+<a name="markAsViewed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">markAsViewed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function markAsViewed(aids:Array):URLRequest</code><p>
+   Отмечает список новых ответов на вопрос пользователя как прочитанный.
+      </p><p>Работает в том случае, если пускается под пользователем -
+   автором вопроса.</p>
+      <p>Возвращает 1. Если некоторые из id ответов не будут
+   относиться к вопросам текущего пользователя, они будут
+   проигнорированы.</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">aids</span>:Array</code> &mdash; список id ответов, которые нужно отметить как прочитанные.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.markAsViewed" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.markAsViewed</a>
+</div>
+</div>
+<a name="search()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">search</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function search(text:String, sort:String = "0", type:String = null, need_profiles:String = "0", name_case:String = null, count:String = "1", offset:String = "0"):URLRequest</code><p>
+   Возвращает список вопросов, соответствующих критериям поиска.
+      </p><p>Возвращает количество найденных вопросов и массив
+   соответствующих им объектов, каждый из которых содержит поля
+   qid, uid, type, text, answers_num, last_poster_id,
+   last_poster_name, last_post_date, date, а также поля name,
+   photo и online (если значение need_profiles в запросе больше
+   0).</p>
+      <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">text</span>:String</code> &mdash; ключевые слова для поиска по вопросам.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sort</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; сортировка результатов (0 - по дате добавления, 1
+   - по числу комментариев).
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> (default = <code>null</code>)<code></code> &mdash; id типа вопросов, среди которых нужно
+   осуществлять поиск.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">need_profiles</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; определяет, требуется ли в ответе
+   краткая информация об авторе вопроса (поля name, photo и
+   online). Значения от 0 до 3. Чем больше значение, тем крупнее
+   фотография в поле photo.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name_case</span>:String</code> (default = <code>null</code>)<code></code> &mdash; падеж для склонения имени и фамилии
+   пользователя. Возможные значения: именительный – nom,
+   родительный – gen, дательный – dat, винительный – acc,
+   творительный – ins, предложный – abl. По умолчанию nom.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">count</span>:String</code> (default = "<code>1</code>")<code></code> &mdash; количество вопросов, которое необходимо
+   получить.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:String</code> (default = "<code>0</code>")<code></code> &mdash; смещение, необходимое для выборки определенного
+   подмножества вопросов.
+      </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>URLRequest</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="UserNameCase.html" target="">UserNameCase</a>
+<br>
+<a href="http://vkontakte.ru/pages.php?o=-1&p=questions.search" target="mm_external">http://vkontakte.ru/pages.php?o=-1&amp;p=questions.search</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">v. 2.0.8</center>
+</div>
+</body>
+</html>
+<!--v. 2.0.8-->
