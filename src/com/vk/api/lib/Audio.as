@@ -60,7 +60,8 @@ package com.vk.api.lib
 		 * Возвращает информацию об аудиозаписях. 
 		 *
 		 * @param audios список идентификаторов вида <code>[UserOwnerID,
-		 * AudioID]</code> или <code>[-GroupOwnerID, AudioID]</code>
+		 * AudioID]</code> или <code>[-GroupOwnerID, AudioID]</code> или
+		 * переменная типа String
 		 *
 		 * @see http://vkontakte.ru/pages.php?o=-1&p=audio.getById
 		 */
@@ -70,9 +71,10 @@ package com.vk.api.lib
 		{
 			var list: Array = [];
 			for each (var id: Array in audios)
-				list.push(String(id[0]) + '_' + String(id[1]));
+				list.push(id is String ? id : String(id[0]) + '_' + String(id[1]));
+
 			APIVK.addParArray('audios', list);
-			return APIVK.req('getById');
+			return APIVK.req('audio.getById');
 		}
 
 		/**
