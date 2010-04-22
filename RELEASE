@@ -1,3 +1,7 @@
+2.0.8:
+  * lib: Audio.as: fix method getById. Extend input params.
+    Thanks to Narkir.
+
 2.0.7:
   * lib: add User.getAppFriends
   * lib: add consts in UserFields
