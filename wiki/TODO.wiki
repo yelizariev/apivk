@@ -6,7 +6,7 @@
 
 
 ----
-При написании классов важно, чтобы были оформлены описания функций ([http://code.google.com/p/apivk/source/browse/trunk/src/com/vk/api/lib/User.as пример])
+При написании классов важно, чтобы были оформлены описания функций ([http://code.google.com/p/apivk/source/browse/trunk/src/com/vk/api/lib/User.as пример], [http://livedocs.adobe.com/flex/3/html/help.html?content=asdoc_1.html документация asdoc])
 
 ссылки:
   * [http://code.google.com/p/apivk/source/browse/trunk/templates/newClass.tmpl newClass.tmpl]
